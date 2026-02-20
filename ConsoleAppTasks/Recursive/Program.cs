@@ -119,7 +119,7 @@ namespace Recursive
             if (number < 0)
             {
                 Console.Write("minus ");
-                number = -number;
+                number =- number;
             }
 
             if (number >= 100)
@@ -185,7 +185,7 @@ namespace Recursive
             //Console.WriteLine("5^ 2 = " + Power(5, 2));
             //Console.WriteLine("3^ -2 = \n" + Power(3, -2));
 
-            AsText(-532);
+            AsText(-142);
 
             int zahl = -102;
 
