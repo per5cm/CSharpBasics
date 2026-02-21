@@ -2,196 +2,115 @@
 namespace Recursive
 {
     internal class Program
-    {
-        public static int FactorialFor(int x = 5)
+    {          
+        static public void AsText()
         {
-            int sum = 1;
+            Console.WriteLine("Bitte ganze zahl eingeben, kann negative sein: ");
+            int input = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 1; i <= x; i++)
-            {
-                sum *= i;
-                Console.WriteLine(sum);
-            }
-            return sum;
-        }
-
-        public static int FactorialWhile(int x = 5)
-        {
-            int sum = 1;
-            int up = 1;
-
-            while(up <= x)
-            {
-                sum *= up;
-                up++;
-                Console.WriteLine(sum);
-            }
-
-            return sum;
-        }
-
-        public static int FactorialRecursive(int x)
-        {
-            if (x <= 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return x * FactorialRecursive(x - 1);
-            }
-        }
-
-        public static double FibonacciRecursive(int x)
-        {
-            if (x <= 1) return x;
-            Console.WriteLine(x);
-            return FibonacciRecursive(x - 1) + FibonacciRecursive(x - 2);
-        }
-
-        public static long FibonacciFor(int x)
-        {
-            long previous = 0;
-            long current = 1;
-            long tempVariable;
-
-            for (int i = 1; i <= x; i++)
-            {
-                tempVariable = previous;
-                previous = current;
-                current = tempVariable + current;
-                Console.WriteLine($"Fibonacci iteration step +{i} => result: {current}");
-            }
-            return current;
-        }
-
-        public static double Power(int number, int power)
-        {
-            double result = 1;
-
-            if (power > 0)
-            {
-                for (int i = 1; i <= power; i++)
-                {
-                    result *= number;
-                }
-            }
-
-            else if (power < 0)
-            {
-                for (int i = -1; i >= power; i--)
-                {
-                    result /= number;
-                }
-            }
-
-            return result;
-        }
-
-        static public int Chain(int x)
-        {
-            for(int row = 0; row < x; row++)
-            {
-                for(int colum = 0; colum < x; colum++)
-                {
-                    if (colum == row || colum == x - 1 - row)
-                    {
-                        Console.Write(".");
-                    }
-                    else
-                    {
-                        Console.Write("X");
-                    }
-                }
-                Console.WriteLine();
-            }
-            return x;
-        }
-
-        static public void AsText(int number)
-        {
-            if(number == 0)
+            if(input == 0)
             {
                 PrintLetter(0);
                 return;
             }
 
-            if (number < 0)
+            if (input < 0)
             {
                 Console.Write("minus ");
-                number =- number;
+                input =- input;
             }
+            HighestPowerOfTen(input);
+            //if (number >= 100)
+            //{
+            //    int hundret = number / 100;
+            //    PrintLetter(hundret);
+            //    number = number % 100;
+            //}
 
-            if (number >= 100)
-            {
-                int hundret = number / 100;
-                PrintLetter(hundret);
-                number = number % 100;
-            }
+            //if (number >= 10)
+            //{
+            //    int ten = number / 10;
+            //    PrintLetter(ten);
+            //    number = number % 10;
+            //}
 
-            if (number >= 10)
-            {
-                int ten = number / 10;
-                PrintLetter(ten);
-                number = number % 10;
-            }
-
-            if (number > 0)
-            {
-                PrintLetter(number);
-            }
+            //if (number > 0)
+            //{
+            //    PrintLetter(number);
+            //}
         }
 
-        //public static int HighestPowerOfTen(int number)
-        //{
-        //    //if (number == 0) return 1;
+        public static int HighestPowerOfTen(int number)
+        {
+            while (number > 0)
+            {
+                int digit = number % 10;
+                PrintLetter(digit);
+                number = number / 10;
+            }
 
-        //    int power = 1;
-        //    while (power * 10 <= number)
-        //    {
-        //        power *= 10;
-        //    }
-
-        //    return number;
-        //}
+            return number;
+        }
 
         public static void PrintLetter(int number)
         {
-            if (number == 0) Console.Write("null ");
-            else if (number == 1) Console.Write("eins, ");
-            else if (number == 2) Console.Write("zwei, ");
-            else if (number == 3) Console.Write("drei, ");
-            else if (number == 4) Console.Write("vier, ");
-            else if (number == 5) Console.Write("fünf, ");
-            else if (number == 6) Console.Write("sechs, ");
-            else if (number == 7) Console.Write("sieben, ");
-            else if (number == 8) Console.Write("acht, ");
-            else if (number == 9) Console.Write("neun, ");
+            var numberToLetter = new Dictionary<int, string>
+            {
+                { 0, "null" },
+                { 1, "eins" },
+                { 2, "zwei" },
+                { 3, "drei" },
+                { 4, "vier" },
+                { 5, "fünf" },
+                { 6, "sechs" },
+                { 8, "acht" },
+                { 9, "neun" }
+            };
+
+            numberToLetter.TryGetValue(number, out var letter);
+            Console.Write(letter + " - ");
+
+            //switch (number)
+            //{
+            //    case 0: Console.Write("null "); break;
+            //    case 1: Console.Write("eins, "); break;
+            //    case 2: Console.Write("zwei, "); break;
+            //    case 3: Console.Write("drei, "); break;
+            //    case 4: Console.Write("vier, "); break;
+            //    case 5: Console.Write("fünf, "); break;
+            //    case 6: Console.Write("sechs, "); break;
+            //    case 7: Console.Write("sieben, "); break;
+            //    case 8: Console.Write("acht, "); break;
+            //    case 9: Console.Write("neun, "); break;
+            //}
+
+            // // it can be huge if else if block as list.
+
         }
 
         public static void Main(string[] args)
         {
             //int numberFactorial = 5;
-            //Console.WriteLine($"\n with For loop -> {FactorialFor()}");
-            //Console.WriteLine($"\n with While loop -> {FactorialWhile()}");
-            //Console.WriteLine($"\n with Recursive -> {FactorialRecursive(5)}");
+            //Console.WriteLine($"\n with For loop -> {Factorial.FactorialFor()}");
+            //Console.WriteLine($"\n with While loop -> {Factorial.FactorialWhile()}");
+            //Console.WriteLine($"\n with Recursive -> {Factorial.FactorialRecursive(5)}");
 
-            //Console.WriteLine($"\nFibonacci = {FibonacciFor(10)}");
+            //Console.WriteLine($"\nFibonacci = {Fibonacci.FibonacciFor(10)}");
 
-            //Console.WriteLine($"\nX pattern: {Chain(15)}");
+            Console.WriteLine($"\npattern x width, y height: {ChainLoop.Chain(5, 10)}");
 
             //Console.WriteLine("\nSome power examples");
-            //Console.WriteLine("\n2^ 3 = " + Power(2, 3));
-            //Console.WriteLine("5^ 2 = " + Power(5, 2));
-            //Console.WriteLine("3^ -2 = \n" + Power(3, -2));
+            //Console.WriteLine("\n2^ 3 = " + PowerOf(2, 3));
+            //Console.WriteLine("5^ 2 = " + PowerOf(5, 2));
+            //Console.WriteLine("3^ -2 = \n" + PowerOf(3, -2));
 
-            AsText(-142);
+            //AsText();
 
-            int zahl = -102;
+            //int zahl = -142;
 
-            string s = zahl.ToString();
-            if (zahl < 0) Console.Write("minus ");
-            foreach(char c in s) PrintLetter(c - '0');
+            //string s = zahl.ToString();
+            //if (zahl < 0) Console.Write("minus ");
+            //foreach(char c in s) PrintLetter(Convert.ToInt32(c));
         }
     }
 }
