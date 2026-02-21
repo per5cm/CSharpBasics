@@ -1,4 +1,6 @@
 ﻿
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace Recursive
 {
     internal class Program
@@ -42,14 +44,23 @@ namespace Recursive
 
         public static int HighestPowerOfTen(int number)
         {
+            List<int> numbers = new ();
+
             while (number > 0)
             {
                 int digit = number % 10;
-                PrintLetter(digit);
-                number = number / 10;
+                //PrintLetter(digit);
+                numbers.Add(digit);
+                number = number / 10;               
             }
 
-            return number;
+            numbers.Reverse();
+
+            foreach (int digit in numbers)
+            {
+                PrintLetter(digit);
+            }
+            return numbers.Count;
         }
 
         public static void PrintLetter(int number)
@@ -67,9 +78,11 @@ namespace Recursive
                 { 9, "neun" }
             };
 
+
+            //with! you can reverse bool try.
             numberToLetter.TryGetValue(number, out var letter);
             Console.Write(letter + " - ");
-
+            
             //switch (number)
             //{
             //    case 0: Console.Write("null "); break;
@@ -86,7 +99,7 @@ namespace Recursive
 
             // // it can be huge if else if block as list.
 
-        }
+            }
 
         public static void Main(string[] args)
         {
@@ -97,14 +110,14 @@ namespace Recursive
 
             //Console.WriteLine($"\nFibonacci = {Fibonacci.FibonacciFor(10)}");
 
-            Console.WriteLine($"\npattern x width, y height: {ChainLoop.Chain(5, 10)}");
+            //Console.WriteLine($"\npattern x width, y height: {ChainLoop.Chain(8, 10)}");
 
             //Console.WriteLine("\nSome power examples");
-            //Console.WriteLine("\n2^ 3 = " + PowerOf(2, 3));
-            //Console.WriteLine("5^ 2 = " + PowerOf(5, 2));
-            //Console.WriteLine("3^ -2 = \n" + PowerOf(3, -2));
+            //Console.WriteLine("\n2^ 3 = " + Power.PowerOf(2, 3));
+            //Console.WriteLine("5^ 2 = " + Power.PowerOf(5, 2));
+            //Console.WriteLine("3^ -2 = \n" + Power.PowerOf(3, -2));
 
-            //AsText();
+            AsText();
 
             //int zahl = -142;
 

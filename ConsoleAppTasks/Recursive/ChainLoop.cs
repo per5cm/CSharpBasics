@@ -6,6 +6,7 @@ namespace Recursive
 {
     internal class ChainLoop
     {
+        //tuple (int width, int height)
         static public (int Width, int Height) Chain(int x, int y)
         {
             for (int row = 0; row < x; row++)
