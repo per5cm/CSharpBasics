@@ -6,6 +6,7 @@ namespace Recursive
 {
     internal class Factorial
     {
+        // factorial is usefull for calculating odds in lottery or brute force a guess on password.
         public static int FactorialFor(int x = 5)
         {
             int sum = 1;

@@ -74,6 +74,7 @@ namespace Recursive
                 { 4, "vier" },
                 { 5, "fünf" },
                 { 6, "sechs" },
+                { 7, "sieben" },
                 { 8, "acht" },
                 { 9, "neun" }
             };
