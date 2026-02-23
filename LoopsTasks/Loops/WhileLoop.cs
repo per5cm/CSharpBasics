@@ -26,9 +26,29 @@ namespace Loops
             }
         }
 
-        internal static void UglyDoWhile()
+        internal static void UglyDoWhile(int total = 0, int count = 0)
         {
+            int grades;
+            do
+            {
+                Console.WriteLine("Schull noten eingeben: ");
+                grades = Convert.ToInt32(Console.ReadLine());
 
+                if (grades >= 1 && grades <= 6)
+                {
+                    total += grades;
+                    count++;
+
+                }
+                else if (grades != 0)
+                {
+                    Console.WriteLine("Note ungültig!");
+                }
+
+                } while (grades != 0);
+
+            Console.WriteLine($"Anzahl Noten {count}, Summe der Noten {total}");
+            Console.WriteLine($"Durschnitt - {total / count}");
         }
     }
 }

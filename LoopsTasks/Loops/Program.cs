@@ -8,7 +8,8 @@ namespace Loops
     {
         internal static void Main(string[] args)
         {
-            WhileLoop.UglyWhile();
+            //WhileLoop.UglyWhile();
+            WhileLoop.UglyDoWhile();
         }
     }
 }
