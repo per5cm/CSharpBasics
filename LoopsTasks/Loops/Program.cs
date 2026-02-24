@@ -8,8 +8,9 @@ namespace Loops
     {
         internal static void Main(string[] args)
         {
-            //WhileLoop.UglyWhile();
-            WhileLoop.UglyDoWhile();
+            //WhileLoop.DivisibleNumber();
+            //WhileLoop.AverageGrade();
+            ForLoop.UglyFor();
         }
     }
 }

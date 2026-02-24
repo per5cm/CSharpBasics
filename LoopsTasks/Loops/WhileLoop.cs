@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Loops
 {
     internal class WhileLoop
     {
-        internal static void UglyWhile(int condition = 1)
+        internal static void DivisibleNumber(int condition = 1)
         {
             Console.WriteLine("Enter the number to check divisible: ");
             int number = Convert.ToInt32(Console.ReadLine());
@@ -20,13 +21,13 @@ namespace Loops
             {
                 if (number % condition == 0)
                 {
-                    Console.WriteLine($"Divisible number of {number} are: {condition}");                    
+                    Console.WriteLine($"Divisible number of {number} are: {condition}");
                 }
                 condition++;
             }
         }
 
-        internal static void UglyDoWhile(int total = 0, int count = 0)
+        internal static void AverageGrade(int total = 0, int count = 0)
         {
             int grades;
             do
@@ -45,7 +46,7 @@ namespace Loops
                     Console.WriteLine("Note ungültig!");
                 }
 
-                } while (grades != 0);
+            } while (grades != 0);
 
             Console.WriteLine($"Anzahl Noten {count}, Summe der Noten {total}");
             Console.WriteLine($"Durschnitt - {total / count}");
