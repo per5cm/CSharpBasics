@@ -1,5 +1,8 @@
 ﻿
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using SixLabors.ImageSharp.Formats.Png;
 
 namespace Recursive
 {
@@ -82,7 +85,7 @@ namespace Recursive
             //with! you can reverse bool try.
             numberToLetter.TryGetValue(number, out var letter);
             Console.Write(letter + " - ");
-            
+
             //switch (number)
             //{
             //    case 0: Console.Write("null "); break;
@@ -99,7 +102,7 @@ namespace Recursive
 
             // // it can be huge if else if block as list.
 
-            }
+        }
 
         public static void Main(string[] args)
         {
@@ -117,13 +120,33 @@ namespace Recursive
             //Console.WriteLine("5^ 2 = " + Power.PowerOf(5, 2));
             //Console.WriteLine("3^ -2 = \n" + Power.PowerOf(3, -2));
 
-            AsText();
+            //AsText();
 
             //int zahl = -142;
 
             //string s = zahl.ToString();
             //if (zahl < 0) Console.Write("minus ");
-            //foreach(char c in s) PrintLetter(Convert.ToInt32(c));
+            //foreach (char c in s) PrintLetter(Convert.ToInt32(c -'0'));
+
+            Image<Rgba32> img = new (400, 300);
+            Rgba32 c1 = new Rgba32(155, 255, 55);
+            Rgba32 c2 = new Rgba32(255, 155, 55);
+            Rgba32 c3 = new Rgba32(120, 55, 120);
+
+            Geometry.Background(img, c1);
+            Geometry.FillRect(img, c2, 50, 50, 40, 30);
+            Geometry.DrawLine(img, c3, 10, 10, 30, 30);
+            Geometry.DrawLine(img, c3, 10, 30, 30, 10);
+
+            string timeStamp = DateTime.Now.ToString("fff_dd.MM.yyyy");
+            string fileName = $"image_{timeStamp}.png";
+
+            string dir = "Images";
+            Directory.CreateDirectory(dir);
+
+            string path = Path.Combine(dir, fileName);
+
+            img.Save(path, new PngEncoder());
         }
     }
 }
