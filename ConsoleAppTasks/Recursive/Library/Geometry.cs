@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Recursive
+namespace Recursive.Library
 {
     internal class Geometry
     {
