@@ -7,22 +7,20 @@ namespace Loops
 {
     internal class ForLoop
     {
-        internal static (int Width, int Height) UglyFor(int x = 3, int y = 10)
+        internal static (int Step, int Total) UglyFor(int x = 3, int total = 10)
         {
-            int total = 0;
+            //int total = 0;
 
-            for (int row = 1; row <= y; row++)
+            for (int step = 1; step <= total; step++)
             {
-                //for (int column = 0; column < x; column++)
-                {
-                    //total += x;
-                    Console.Write(row * x);
-                    if (x < y) Console.Write(", ");
-                }
+                //total += x;
+                Console.Write(step * x);
+                if (x < total) Console.Write(", ");
+                
                 //Console.WriteLine();
             }
 
-            return (x, y);
+            return (x, total);
         }
     }
 }
