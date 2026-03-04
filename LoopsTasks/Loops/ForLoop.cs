@@ -22,5 +22,29 @@ namespace Loops
 
             return (x, total);
         }
+
+        internal static void DuePay()
+        {
+            Console.WriteLine("Principal amount in Euro: ");
+            if (!double.TryParse(Console.ReadLine(), out double principal) || principal <= 0) goto Error;
+
+            Console.WriteLine("Enter a intrest rate: ");
+            if (!double.TryParse(Console.ReadLine(), out double intrest) || intrest <= 0) goto Error;
+
+            Console.WriteLine("Enter a time period: ");
+            if (!double.TryParse(Console.ReadLine(), out double time) || time <= 0) goto Error;
+
+            double rate = intrest / 100;
+
+            for(int start = 1; start <= time; start++ )
+            {
+                principal *= (1 + rate);
+
+                Console.WriteLine($"Intrest after {time} Year will be: {principal:F2}");
+            }
+
+        Error:
+            Console.WriteLine("Invalid input. Try again.");
+        }
     }
 }
