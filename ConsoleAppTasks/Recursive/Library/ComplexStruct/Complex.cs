@@ -11,7 +11,8 @@ namespace Recursive.Library.ComplexStruct
 
         internal Complex(double real, double imaginary)
         {
-
+            real = r;
+            imaginary = i;
         }
 
     }
