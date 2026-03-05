@@ -22,55 +22,75 @@ namespace Recursive.Library.ComplexStruct
   d = C2.imaginaereZahl
 ====================================================================*/
 {
-    internal class ComplexLibrary
+    internal static class ComplexLibrary
     {
-        Complex comeplex;
-        Complex complex1 = new Complex(2.0, 3.0);
-        Complex complex2 = new Complex(4.0, 5.0);
+        internal static readonly Complex complex1 = new (2.0, 3.0);
+        internal static readonly Complex complex2 = new (4.0, 5.0);
     
 
     internal static void PrintComplex(Complex complex)
         {
-            if (complex.imaginary == 0) Console.WriteLine($"{complex.real}");
-            else if (complex.imaginary > 0) Console.WriteLine($"{complex.real} + {complex.imaginary}i");
+            if (complex.Imaginary == 0) Console.WriteLine($"{complex.Real}");
+            else if (complex.Imaginary > 0) Console.WriteLine($"{complex.Real} + {complex.Imaginary}i");
             // < 0
-            else Console.WriteLine($"{complex.real} - {Math.Abs(complex.imaginary)}i");
+            else Console.WriteLine($"{complex.Real} - {Math.Abs(complex.Imaginary)}i");
             
         }
-        internal Complex AddComplex(Complex complex1, Complex complex2)
+        internal static Complex AdditionComplex(Complex complex1, Complex complex2)
         {
             // (a + b * i) + (c + d * i) = (a + c) + (b + d) * i
 
             // real part: a + b * i
-            double newReal = complex1.real + complex2.real;
+            double newReal = complex1.Real + complex2.Real;
 
             // imaginary part: b + d * i
-            double newImaginary = complex1.imaginary + complex2.imaginary;
+            double newImaginary = complex1.Imaginary + complex2.Imaginary;
 
             return new Complex(newReal, newImaginary);
         }
 
-        internal Complex MultComplex(Complex complex1, Complex complex2)
+        internal static Complex SubstractionComplex(Complex complex1, Complex complex2)
         {
-            // (a + b · i) · (c + d · i) = (a · c – b · d) + (a · d – b · c) · i
+            //(a + b · i) − (c + d · i) = (a − c) + (b − d)· i
+
+            // a − c * i
+            double newReal = complex1.Real - complex2.Real;
+
+            // b − d * i
+            double newImaginary = complex1.Imaginary - complex2.Imaginary;
+
+            return new Complex(newReal, newImaginary);
+        }
+
+        internal static Complex MultiplicationComplex(Complex complex1, Complex complex2)
+        {
+            // (a + b · i) · (c + d · i) = (a · c – b · d) + (a · d + b · c) · i
 
             // (a · c – b · d)
-            double real = complex1.real * complex2.real - complex1.imaginary * complex2.imaginary;
+            double real = (complex1.Real * complex2.Real) - (complex1.Imaginary * complex2.Imaginary);
 
-            // (a · d – b · c)
-            double imaginary = complex1.real * complex2.imaginary + complex1.imaginary * complex2.real; 
+            // (a · d + b · c)
+            double imaginary = (complex1.Real * complex2.Imaginary) + (complex1.Imaginary * complex2.Real); 
             
             return new Complex(real, imaginary);
         }
 
-        internal int Norm(Complex c)
+        internal static Complex DivisionComplex(Complex complex1, Complex complex2)
         {
 
+            return new Complex();
+        }
+
+        internal static int Norm(Complex c)
+        {
+            int x = 0;
+            return x;
         }
 
         internal static uint Waves(Complex c, double waveValue)
         {
-
+            uint x = 0;
+            return x;
         }
     }
 }

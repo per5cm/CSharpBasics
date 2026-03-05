@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Recursive.Library.ComplexStruct
 {
-    internal struct Complex
+    // readonly makes Complex get imutable. no mutations anywhere even inside methods.
+    internal readonly struct Complex
     {
-        internal double real;
-        internal double imaginary;
+        internal double Real { get; }
+        internal double Imaginary { get; }
 
         internal Complex(double real, double imaginary)
         {
-            real = r;
-            imaginary = i;
+            Real = real;
+            Imaginary = imaginary;
         }
-
     }
 }
