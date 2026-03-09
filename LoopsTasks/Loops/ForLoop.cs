@@ -22,7 +22,6 @@ namespace Loops
 
             return (x, total);
         }
-
         internal static void DuePay()
         {
             Console.WriteLine("Principal amount in Euro: ");
