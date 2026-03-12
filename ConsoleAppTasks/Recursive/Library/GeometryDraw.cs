@@ -11,8 +11,8 @@ namespace Recursive.Library
     {
         public static void DrawImage()
         {
-            Rgba32 white = new Rgba32(255, 255, 255);
-            Rgba32 black = new Rgba32(0, 0, 0);
+            Rgba32 white = new (255, 255, 255);
+            Rgba32 black = new (0, 0, 0);
 
             int squareSize = 100;
 
