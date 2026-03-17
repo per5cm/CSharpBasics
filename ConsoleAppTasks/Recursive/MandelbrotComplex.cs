@@ -53,6 +53,7 @@ namespace Recursive
                     img[xPixel, yPixel] = farbe;
                 }
             }
+
             string pfad = Path.Combine("C:", "Users", "Teilnehmer", "Desktop", "VS", "Uebungsblatter", "Bilderstellung", "PNGs");
             string timeStamp = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
             string bildName = $"Mandelbrot_{timeStamp}.png";
