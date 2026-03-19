@@ -1,4 +1,4 @@
-﻿using EmailApp.Person;
+﻿using EmailApp.Models;
 using EmailApp.Email.MessageTemplate;
 using EmailApp.Email.EmailSender;
 using System;
@@ -9,15 +9,15 @@ namespace EmailApp.Service
 {
     internal class BirthdayService
     {
-        private readonly List<PersonConstructor> constructors;
-        private readonly EmailSenderStatus sender;
+        private readonly List<Person> reciever;
+        private readonly SenderBoilerPlate sender;
 
-        internal BirthdayService(List<PersonConstructor> constructor, EmailSenderStatus sender)
+        internal BirthdayService(List<Person> reciever, SenderBoilerPlate sender)
         {
-            this.constructors = constructor;
+            this.reciever = reciever;
             this.sender = sender;
 
-            this.constructors.Add(new PersonConstructor { Name = "Karen", BirthDate = new DateTime(19, 3, 1960), Email = "karen.longbottom@gmail.com", RelationshipTag = "friend" });
+            this.reciever.Add(new Person { Name = "Karen", BirthDate = new DateTime(19, 3, 1960), Email = "karen.longbottom@gmail.com", RelationshipTag = "friend" });
         }
     }
 }

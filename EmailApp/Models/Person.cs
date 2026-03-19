@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EmailApp.Person
+namespace EmailApp.Models
 {
-    internal class PersonConstructor
+    internal class Person
     {
         internal string Name { get; set; } = string.Empty;
         internal DateTime BirthDate { get; set; }
