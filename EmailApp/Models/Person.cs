@@ -13,7 +13,7 @@ namespace EmailApp.Models
         internal DateTime LastSent { get; set; }
         internal bool IsSent { get; set; } = false;
         internal string PreferredMessageStyle { get; set; } = string.Empty;
-        internal string RelationshipTag { get; set; } = "friend";
+        internal string RelationshipTag { get; set; } = "";
         internal string Intrest { get; set; } = string.Empty;
 
 

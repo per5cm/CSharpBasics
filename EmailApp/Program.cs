@@ -1,7 +1,7 @@
 ﻿using System;
 using EmailApp.Email.EmailSender;
 using EmailApp.Email.MessageTemplate;
-using EmailApp.Person;
+using EmailApp.Models;
 using EmailApp.Service.Schedule;
 using EmailApp.Service;
 
