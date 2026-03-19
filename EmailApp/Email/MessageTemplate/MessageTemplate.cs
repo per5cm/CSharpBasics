@@ -5,7 +5,14 @@ using System.Text;
 
 namespace EmailApp.Email.MessageTemplate
 {
-    internal class MessageTemplateComposer
+    internal class MessageTemplateSubject
+    {
+        internal string Subject(string subject = "Greeting.")
+        {
+            return subject;
+        }
+    }
+    internal class MessageTemplateBody
     {
         internal string SubjectHappyBirthday(PersonConstructor person)
         {

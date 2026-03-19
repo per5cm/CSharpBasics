@@ -1,13 +1,14 @@
-﻿using System;
+﻿using EmailApp.Email.MessageTemplate;
+using EmailApp.Person;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using EmailApp.Person;
 
 namespace EmailApp.Email.EmailSender
 {
     internal class EmailSenderStatus
     {
-        public bool Send(PersonConstructor person, string subject, string body)
+        public bool Send(PersonConstructor person, MessageTemplateSubject subject, MessageTemplateBody body)
         {
             Console.WriteLine("+==================================+");
             Console.WriteLine($"Sending email to: {person.Email}");
