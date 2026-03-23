@@ -24,9 +24,8 @@ namespace Recursive.Library.ComplexStruct
 {
     internal static class ComplexLibrary
     {
-        internal static readonly Complex complex1 = new (2.0, 3.0);
-        internal static readonly Complex complex2 = new (4.0, 5.0);
-    
+        //internal static readonly Complex complex1 = new (2.0, 3.0);
+        //internal static readonly Complex complex2 = new (4.0, 5.0);
 
     internal static void PrintComplex(Complex complex)
         {
@@ -41,12 +40,12 @@ namespace Recursive.Library.ComplexStruct
             // (a + b * i) + (c + d * i) = (a + c) + (b + d) * i
 
             // real part: a + b * i
-            double newReal = complex1.Real + complex2.Real;
+            double realPart = complex1.Real + complex2.Real;
 
             // imaginary part: b + d * i
-            double newImaginary = complex1.Imaginary + complex2.Imaginary;
+            double imaginaryPart = complex1.Imaginary + complex2.Imaginary;
 
-            return new Complex(newReal, newImaginary);
+            return new Complex(realPart, imaginaryPart);
         }
 
         internal static Complex SubstractionComplex(Complex complex1, Complex complex2)
@@ -54,12 +53,12 @@ namespace Recursive.Library.ComplexStruct
             //(a + b · i) − (c + d · i) = (a − c) + (b − d)· i
 
             // a − c * i
-            double newReal = complex1.Real - complex2.Real;
+            double realPart = complex1.Real - complex2.Real;
 
             // b − d * i
-            double newImaginary = complex1.Imaginary - complex2.Imaginary;
+            double imaginaryPart = complex1.Imaginary - complex2.Imaginary;
 
-            return new Complex(newReal, newImaginary);
+            return new Complex(realPart, imaginaryPart);
         }
 
         internal static Complex MultiplicationComplex(Complex complex1, Complex complex2)
@@ -67,18 +66,24 @@ namespace Recursive.Library.ComplexStruct
             // (a + b · i) · (c + d · i) = (a · c – b · d) + (a · d + b · c) · i
 
             // (a · c – b · d)
-            double real = (complex1.Real * complex2.Real) - (complex1.Imaginary * complex2.Imaginary);
+            double realPart = (complex1.Real * complex2.Real) - (complex1.Imaginary * complex2.Imaginary);
 
             // (a · d + b · c)
-            double imaginary = (complex1.Real * complex2.Imaginary) + (complex1.Imaginary * complex2.Real); 
+            double imaginaryPart = (complex1.Real * complex2.Imaginary) + (complex1.Imaginary * complex2.Real); 
             
-            return new Complex(real, imaginary);
+            return new Complex(realPart, imaginaryPart);
         }
 
         internal static Complex DivisionComplex(Complex complex1, Complex complex2)
         {
+            double denominator = complex2.Real * complex2.Real + complex2.Imaginary * complex2.Imaginary;
+            if (Math.Abs(denominator) < 1e-12)
+                throw new DivideByZeroException("Division durch Null Komplex.");
 
-            return new Complex();
+            double realPart = (complex1.Real * complex2.Real + complex1.Imaginary * complex2.Imaginary) / denominator;
+            double imaginaryPart = (complex1.Imaginary * complex2.Real - complex1.Real * complex2.Imaginary) / denominator;
+
+            return new Complex(realPart, imaginaryPart);
         }
 
         internal static int Norm(Complex c)
