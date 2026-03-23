@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Recursive.Library.ComplexStruct
+namespace Recursive.Library.ComplexLib
 
 /*
     Eigenschaft	    struct	        class
@@ -86,7 +86,7 @@ namespace Recursive.Library.ComplexStruct
         {
             double denominator = complex2.Real * complex2.Real + complex2.Imaginary * complex2.Imaginary;
             if (Math.Abs(denominator) < 1e-12)
-                throw new DivideByZeroException("Division durch Null Komplex.");
+                throw new DivideByZeroException("Division durch Null - Komplex.");
 
             double realPart = (complex1.Real * complex2.Real + complex1.Imaginary * complex2.Imaginary) / denominator;
             double imaginaryPart = (complex1.Imaginary * complex2.Real - complex1.Real * complex2.Imaginary) / denominator;
@@ -101,12 +101,12 @@ namespace Recursive.Library.ComplexStruct
             return Math.Sqrt(square);
         }
 
-        internal static uint Threshold(Complex complex, double escapeRadius)
+        internal static uint Threshold(Complex complex, double escapeRadius, uint maxIterations)
         {
             Complex currentPart = new (0, 0);
             uint iteration = 0;
 
-            while (Norm(currentPart)  <= escapeRadius && iteration < 1000) // hardcoded 1000 medium range, see table for rough render time multiplier.
+            while (Norm(currentPart)  <= escapeRadius && iteration < maxIterations) // hardcoded 1000 medium range, see table for rough render time multiplier.
             {
                 currentPart = MultiplicationComplex(currentPart, currentPart);
                 currentPart = AdditionComplex(currentPart, complex);

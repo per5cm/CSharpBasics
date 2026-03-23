@@ -12,8 +12,10 @@ namespace Recursive
     {   
         public static void Main(string[] args)
         {
+            MandelbrotComplex.Render();
 
-            GeometryDraw.DrawImage();
+            //GeometryDraw.DrawImage();
+
             //int numberFactorial = 5;
             //Console.WriteLine($"\n with For loop -> {Factorial.FactorialFor()}");
             //Console.WriteLine($"\n with While loop -> {Factorial.FactorialWhile()}");

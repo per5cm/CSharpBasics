@@ -1,5 +1,6 @@
 ﻿using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,13 +9,13 @@ namespace Recursive.Library
 {
     internal class Geometry
     {
-        public static void Background (Image<Rgba32> img, Rgba32 c)
+        public static void Background (Image<Rgba32> image, Rgba32 c)
         {
-            for (int x = 0; x < img.Width; x++)
+            for (int x = 0; x < image.Width; x++)
             {
-                for (int y = 0; y < img.Height; y++)
+                for (int y = 0; y < image.Height; y++)
                 {
-                    img[x, y] = c;
+                    image[x, y] = c;
                 }
             }               
         }
