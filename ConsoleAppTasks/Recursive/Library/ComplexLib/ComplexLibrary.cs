@@ -86,16 +86,27 @@ namespace Recursive.Library.ComplexStruct
             return new Complex(realPart, imaginaryPart);
         }
 
-        internal static int Norm(Complex c)
+        internal static double Norm(Complex complex)
         {
-            int x = 0;
-            return x;
+            double square = (complex.Real * complex.Real + complex.Imaginary * complex.Imaginary);
+
+            return Math.Sqrt(square);
         }
 
-        internal static uint Waves(Complex c, double waveValue)
+        internal static uint Threshhold(Complex complex, double thresholdRadius)
         {
-            uint x = 0;
-            return x;
+            Complex currentPart = new (0, 0);
+            uint iteration = 0;
+
+            while (Norm(currentPart)  <= thresholdRadius && iteration < 1000) // hardcoded 1000 medium range, see table for rough render time multiplier.
+            {
+                currentPart = MultiplicationComplex(currentPart, currentPart);
+                currentPart = AdditionComplex(currentPart, complex);
+
+                iteration++;
+            }
+
+            return iteration;
         }
     }
 }
