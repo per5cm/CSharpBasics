@@ -33,7 +33,7 @@ namespace Recursive
 
                     Complex c = new(real, imag);
 
-                    uint schwelle = ComplexLibrary.Threshhold(c, max);
+                    uint schwelle = ComplexLibrary.Threshold(c, max);
 
                     Rgba32 farbe;
 

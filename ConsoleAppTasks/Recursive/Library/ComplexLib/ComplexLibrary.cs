@@ -27,13 +27,21 @@ namespace Recursive.Library.ComplexStruct
         //internal static readonly Complex complex1 = new (2.0, 3.0);
         //internal static readonly Complex complex2 = new (4.0, 5.0);
 
-    internal static void PrintComplex(Complex complex)
+        internal static void PrintComplex(Complex complex)
         {
-            if (complex.Imaginary == 0) Console.WriteLine($"{complex.Real}");
-            else if (complex.Imaginary > 0) Console.WriteLine($"{complex.Real} + {complex.Imaginary}i");
-            // < 0
-            else Console.WriteLine($"{complex.Real} - {Math.Abs(complex.Imaginary)}i");
-            
+            if (complex.Imaginary == 0)
+            {
+                Console.WriteLine(complex.Real);
+                return;
+            }
+
+            string sign = complex.Imaginary > 0 ? "+" : "-";
+            double absIn = Math.Abs(complex.Imaginary);
+
+            if (complex.Real == 0)
+                Console.WriteLine($"{absIn}{sign}i");
+            else
+                Console.WriteLine($"{complex.Real}{sign}{absIn}i");
         }
         internal static Complex AdditionComplex(Complex complex1, Complex complex2)
         {
@@ -48,7 +56,7 @@ namespace Recursive.Library.ComplexStruct
             return new Complex(realPart, imaginaryPart);
         }
 
-        internal static Complex SubstractionComplex(Complex complex1, Complex complex2)
+        internal static Complex SubtractionComplex(Complex complex1, Complex complex2)
         {
             //(a + b · i) − (c + d · i) = (a − c) + (b − d)· i
 
@@ -93,12 +101,12 @@ namespace Recursive.Library.ComplexStruct
             return Math.Sqrt(square);
         }
 
-        internal static uint Threshhold(Complex complex, double thresholdRadius)
+        internal static uint Threshold(Complex complex, double escapeRadius)
         {
             Complex currentPart = new (0, 0);
             uint iteration = 0;
 
-            while (Norm(currentPart)  <= thresholdRadius && iteration < 1000) // hardcoded 1000 medium range, see table for rough render time multiplier.
+            while (Norm(currentPart)  <= escapeRadius && iteration < 1000) // hardcoded 1000 medium range, see table for rough render time multiplier.
             {
                 currentPart = MultiplicationComplex(currentPart, currentPart);
                 currentPart = AdditionComplex(currentPart, complex);
