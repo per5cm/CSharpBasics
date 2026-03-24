@@ -1,12 +1,11 @@
 ﻿using Recursive.Library;
-using Recursive.Library.ComplexLib;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Recursive
+namespace Recursive.Library.ComplexLib
 {
     internal class MandelbrotComplex
     {
