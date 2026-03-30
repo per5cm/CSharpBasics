@@ -28,6 +28,9 @@ namespace BankFundamentals
 
             karen.GreetingUser();
             bob.GreetingUser();
+
+            Console.WriteLine($"Owner: {karen.Owner}. Balance: {karen.Balance}.");
+            Console.WriteLine($"Owner: {bob.Owner}. Balance: {bob.Balance}.");
         }
     }
 }
