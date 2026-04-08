@@ -1,6 +1,7 @@
-﻿using BankFundamentals.Library.Actions;
+﻿//using BankFundamentals.Library.Actions;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace BankFundamentals.Library.Models
@@ -17,7 +18,7 @@ namespace BankFundamentals.Library.Models
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Owner cant bet null.");
+                    throw new ArgumentException("Owner cant bet null or empty.");
                 _owner = value;
             }
         }
@@ -55,14 +56,19 @@ namespace BankFundamentals.Library.Models
 
         internal void WithdrawFrom(decimal amount)
         {
-            Withdraw withdraw = new ();
-            Balance = withdraw.WithdrawMoney(Balance, amount);
+            if (amount <= 0 || amount > Balance) throw new ArgumentOutOfRangeException(nameof(amount), "Invalid amount you wish to withdraw.");
+            Balance = Balance - amount;
         }
 
-        internal void TransferTo(Account reciever, decimal amount)
+        internal void TransferTo(Account sender, Account reciever, decimal amount)
         {
-            Transfer transferAction = new ();
-            transferAction.TransferToAccount(this, reciever, amount);
+            if (amount <= 0)
+                throw new ArgumentOutOfRangeException(nameof(amount), "Transfer amount must be positive.");
+            if (sender.Balance < amount)
+                throw new ArgumentOutOfRangeException(nameof(amount), "Not enough money to transfer.");
+
+            sender.Balance = sender.Balance - amount;
+            reciever.Balance = reciever.Balance + amount;
         }
     }
 
@@ -76,5 +82,17 @@ namespace BankFundamentals.Library.Models
     //        //Console.WriteLine($"Debug: new balance calculated = {newBalance}");
     //    }
 
-    #endregion
-}
+    //internal void WithdrawFrom(decimal amount)
+    //    {
+    //        Withdraw withdraw = new();
+    //        Balance = withdraw.WithdrawMoney(Balance, amount);
+    //    }
+
+    //internal void TransferTo(Account reciever, decimal amount)
+    //    {
+    //        Transfer transferAction = new();
+    //        transferAction.TransferToAccount(this, reciever, amount);
+    //    }
+
+        #endregion
+    }
