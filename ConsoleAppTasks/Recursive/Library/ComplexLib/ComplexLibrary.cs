@@ -116,5 +116,23 @@ namespace Recursive.Library.ComplexLib
 
             return iteration;
         }
+
+        internal static uint ThresholdFast(Complex complex, double escapeRadius, uint maxIterations)
+        {
+            double realPart = 0, imaginaryPart = 0;
+            uint iteration = 0;
+            double escapeRadiusSquared = escapeRadius * escapeRadius;
+
+            while ((realPart * realPart + imaginaryPart * imaginaryPart) <= escapeRadiusSquared && iteration < maxIterations)
+            {
+                double newRealPart = (realPart * realPart - imaginaryPart * imaginaryPart) + complex.Real;
+                double newImaginaryPart = (2 * realPart * imaginaryPart) + complex.Imaginary;
+                realPart = newRealPart; 
+                imaginaryPart = newImaginaryPart;
+                iteration++;
+            }
+
+            return iteration;
+        }
     }
 }
