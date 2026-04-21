@@ -8,25 +8,25 @@ namespace BankFundamentals.Library.Models
 {
     internal class Account
     {
-        private string _owner = string.Empty;
+        private readonly string _owner = string.Empty;
         private decimal _balance = decimal.Zero;
         private readonly string _accountNumber;
 
         internal string Owner
         {
             get => _owner;
-            set
+            private init
             {
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Owner cant bet null or empty.");
                 _owner = value;
             }
         }
-        internal int Age { get; } 
+        private int Age { get; } 
         internal decimal Balance
         {
             get => _balance;
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentOutOfRangeException(nameof(value), "Balance cant bet negative.");
@@ -39,7 +39,7 @@ namespace BankFundamentals.Library.Models
             Owner = owner;
             Age = age;
             Balance = balance;
-            _accountNumber = "ACC-" + owner.ToUpper() + age + new Random().Next(100, 999) + "NEWHUMAN";
+            _accountNumber = "ACC-" + owner.ToUpper() + age + new Random().Next(100, 999) + "NEWHUMMAN";
         }
 
         internal void GreetingUser()
