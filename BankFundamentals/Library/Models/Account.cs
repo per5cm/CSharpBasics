@@ -60,15 +60,15 @@ namespace BankFundamentals.Library.Models
             Balance = Balance - amount;
         }
 
-        internal void TransferTo(Account sender, Account reciever, decimal amount)
+        internal void TransferTo(Account receiver, decimal amount)
         {
             if (amount <= 0)
                 throw new ArgumentOutOfRangeException(nameof(amount), "Transfer amount must be positive.");
-            if (sender.Balance < amount)
+            if (Balance < amount)
                 throw new ArgumentOutOfRangeException(nameof(amount), "Not enough money to transfer.");
 
-            sender.Balance = sender.Balance - amount;
-            reciever.Balance = reciever.Balance + amount;
+            Balance = Balance - amount;
+            receiver.Balance = receiver.Balance + amount;
         }
     }
 
