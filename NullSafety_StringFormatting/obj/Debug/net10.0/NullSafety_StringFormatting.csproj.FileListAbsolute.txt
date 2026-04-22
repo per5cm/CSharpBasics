@@ -1,0 +1,14 @@
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/bin/Debug/net10.0/NullSafety_StringFormatting
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/bin/Debug/net10.0/NullSafety_StringFormatting.deps.json
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/bin/Debug/net10.0/NullSafety_StringFormatting.runtimeconfig.json
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/bin/Debug/net10.0/NullSafety_StringFormatting.dll
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/bin/Debug/net10.0/NullSafety_StringFormatting.pdb
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.GeneratedMSBuildEditorConfig.editorconfig
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.AssemblyInfoInputs.cache
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.AssemblyInfo.cs
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.csproj.CoreCompileInputs.cache
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.dll
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/refint/NullSafety_StringFormatting.dll
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.pdb
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.genruntimeconfig.cache
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/ref/NullSafety_StringFormatting.dll
