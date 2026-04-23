@@ -1,10 +1,4 @@
-﻿//using BankFundamentals.Library.Actions;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-
-namespace BankFundamentals.Library.Models
+﻿namespace BankFundamentals.Library.Models
 {
     internal class Account
     {
