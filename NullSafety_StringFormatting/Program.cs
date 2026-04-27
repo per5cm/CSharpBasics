@@ -9,7 +9,7 @@ namespace NullSafety_StringFormatting
         
         static void Main(string[] args)
         {
-            User user = new User(FirstName: null,LastName: null, Age: 18);
+            User user = new User(FirstName: null,LastName: "Bottom", Age: null);
             User newUser = new User(FirstName: "John", LastName: "Doe", Age: 18);
             
             Console.WriteLine(GetGreeting(user));
@@ -19,18 +19,33 @@ namespace NullSafety_StringFormatting
         static string GetGreeting(User user)
         {
             // If FirstName is null → use "stranger"
-            string? greeting = user.FirstName == null
-                ? $"Hello stranger {user.FirstName}"
-                : $"Hello {user.FirstName}, {user.LastName}, is {user.Age} years old ";
-
+            string name = user.FirstName ?? "stranger";
+            
             // If LastName is null → omit it entirely
-            string? lastName = user.LastName ?? null;
+            string last = user.LastName != null ? " " + user.LastName : "";
             
             // If Age is null → omit it, otherwise append "aged X"
-            int? age = user.Age == null ? null : user.Age;
+            string age = user.Age != null ? $" aged {user.Age}" : "";
             
-            // return $"Hello {user.FirstName} {user.LastName} {user.Age} years old. {lastName}!";
-            return greeting;
+            return $"Hello, {name}{last}{age}";
         }
+        
+        #region Old Code
+        
+        // // If LastName is null → omit it entirely
+        // string? lastName = user.LastName ?? null;
+        //     
+        // // If Age is null → omit it, otherwise append "aged X"
+        // int? age = user.Age == null ? null : user.Age;
+        //     
+        // // If FirstName is null → use "stranger"
+        // string? greeting = user.FirstName == null
+        //         ? $"Hello stranger {user.FirstName} {lastName}"
+        //         : $"Hello {user.FirstName}, {lastName}, is {age} years old "; 
+        //     
+        //     // return $"Hello {user.FirstName} {user.LastName} {user.Age} years old. {lastName}!";
+        //     return greeting;
+        
+        #endregion
     }
 }
