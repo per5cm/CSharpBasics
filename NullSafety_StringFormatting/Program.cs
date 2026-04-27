@@ -18,12 +18,15 @@ namespace NullSafety_StringFormatting
 
         static string GetGreeting(User user)
         {
+            // coalescing
             // If FirstName is null → use "stranger"
             string name = user.FirstName ?? "stranger";
             
+            // ternary
             // If LastName is null → omit it entirely
             string last = user.LastName != null ? " " + user.LastName : "";
             
+            // ternary
             // If Age is null → omit it, otherwise append "aged X"
             string age = user.Age != null ? $" aged {user.Age}" : "";
             
