@@ -10,8 +10,10 @@ namespace NullSafety_StringFormatting
         static void Main(string[] args)
         {
             User user = new User(FirstName: null,LastName: null, Age: 18);
+            User newUser = new User(FirstName: "John", LastName: "Doe", Age: 18);
             
             Console.WriteLine(GetGreeting(user));
+            Console.WriteLine(GetGreeting(newUser));
         }
 
         static string GetGreeting(User user)
@@ -19,7 +21,7 @@ namespace NullSafety_StringFormatting
             // If FirstName is null → use "stranger"
             string? greeting = user.FirstName == null
                 ? $"Hello stranger {user.FirstName}"
-                : $"Hello {user.FirstName}, {user.LastName}, {user.Age}";
+                : $"Hello {user.FirstName}, {user.LastName}, is {user.Age} years old ";
 
             // If LastName is null → omit it entirely
             string? lastName = user.LastName ?? null;
@@ -27,7 +29,8 @@ namespace NullSafety_StringFormatting
             // If Age is null → omit it, otherwise append "aged X"
             int? age = user.Age == null ? null : user.Age;
             
-            return $"Hello {user.FirstName} {user.LastName} {user.Age} years old. {lastName}!";
+            // return $"Hello {user.FirstName} {user.LastName} {user.Age} years old. {lastName}!";
+            return greeting;
         }
     }
 }

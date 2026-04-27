@@ -12,3 +12,4 @@
 /home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.pdb
 /home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.genruntimeconfig.cache
 /home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/ref/NullSafety_StringFormatting.dll
+/home/Alchemist/Desktop/FiAe-Curriculum/CSharpBasics/NullSafety_StringFormatting/obj/Debug/net10.0/NullSafety_StringFormatting.sourcelink.json
