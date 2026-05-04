@@ -1,6 +1,6 @@
 namespace Inheritance_And_Polymorphism.Library;
 
-public class Shape
+abstract class Shape
 {
-    
+    public abstract double Area();
 }

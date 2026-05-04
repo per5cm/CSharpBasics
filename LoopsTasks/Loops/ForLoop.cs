@@ -27,19 +27,19 @@ namespace Loops
             Console.WriteLine("Principal amount in Euro: ");
             if (!double.TryParse(Console.ReadLine(), out double principal) || principal <= 0) goto Error;
 
-            Console.WriteLine("Enter a intrest rate: ");
-            if (!double.TryParse(Console.ReadLine(), out double intrest) || intrest <= 0) goto Error;
+            Console.WriteLine("Enter a interest rate: ");
+            if (!double.TryParse(Console.ReadLine(), out double interest) || interest <= 0) goto Error;
 
             Console.WriteLine("Enter a time period: ");
             if (!double.TryParse(Console.ReadLine(), out double time) || time <= 0) goto Error;
 
-            double rate = intrest / 100;
+            double rate = interest / 100;
 
             for(int start = 1; start <= time; start++ )
             {
                 principal *= (1 + rate);
 
-                Console.WriteLine($"Intrest after {time} Year will be: {principal:F2}");
+                Console.WriteLine($"Interest after {time} Year will be: {principal:F2}");
             }
 
         Error:
