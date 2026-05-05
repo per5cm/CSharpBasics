@@ -10,10 +10,9 @@ namespace Interface
         {
             List<IAnimal> animals = new()
             {
-                new Dog("Rex"),
-                new Cat("Whiskers"),
-                new Dog("Buddy"),
-
+                new Dog(name:"Rex"),
+                new Cat(name:"Whiskers"),
+                new Dog(name:"Buddy"),
             };
 
             foreach (var animal in animals)
