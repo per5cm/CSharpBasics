@@ -9,9 +9,9 @@ namespace Inheritance_And_Polymorphism
         {
             List<Shape> shapes = new()
             {
-                new Circle(5),
-                new Rectangle(4,6),
-                new Circle(3),
+                new Circle(radius:5),
+                new Rectangle(width:4,height:6),
+                new Circle(radius:3),
             };
             
             foreach (var shape in shapes)
