@@ -2,7 +2,7 @@ namespace Playground.Library;
 
 public class Divide
 {
-    internal double DivideCheck(double num1, double num2)
+    internal static double DivideCheck(double num1, double num2)
     {
         if (num2 == 0)
             throw new DivideByZeroException("cant divide 0");
