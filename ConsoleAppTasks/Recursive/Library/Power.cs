@@ -31,7 +31,7 @@ namespace Recursive.Library
 
         static public void AsText()
         {
-            Console.WriteLine("Bitte ganze zahl eingeben, kann negative sein: ");
+            Console.WriteLine("Bitte ganzezahl eingeben, kann negative sein: ");
             int input = Convert.ToInt32(Console.ReadLine());
 
             if (input == 0)
@@ -46,7 +46,7 @@ namespace Recursive.Library
                 input = -input;
             }
             HighestPowerOfTen(input);
-            //if (number >= 100)
+            // if (number >= 100)
             //{
             //    int hundret = number / 100;
             //    PrintLetter(hundret);
