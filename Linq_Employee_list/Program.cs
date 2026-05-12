@@ -1,0 +1,29 @@
+﻿using System;
+
+namespace Linq_Employee_list
+{
+    internal class Program
+    {
+        record Employee(string Name, string Department, decimal Salary);
+
+        List<Employee> employees = new()
+        {
+            new Employee(Name:"Alice",Department:"Marketing", Salary:72000),
+            new Employee(Name:"Bob",Department:"Engineering", Salary:95000),
+            new Employee(Name:"Charlie",Department:"Engineering", Salary:11000),
+            new Employee(Name:"Karen",Department:"HR", Salary:68000),
+            new Employee(Name:"Eve",Department:"Engineering", Salary:88000),
+            new Employee(Name:"Frank",Department:"Marketing", Salary:79000),
+        };
+        
+        // 1. Get all Engineering employees, ordered by salary descending
+        // 2. Get the average salary across all employees
+        // 3. Get the highest paid employee in each department
+        // 4. Get names of employees earning above 80k, uppercase
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
