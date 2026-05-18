@@ -32,7 +32,7 @@ namespace Loops
             int grades;
             do
             {
-                Console.WriteLine("Noten Eingeben: ");
+                Console.WriteLine("Noten eingeben: ");
                 grades = Convert.ToInt32(Console.ReadLine());
 
                 if (grades >= 1 && grades <= 6)
