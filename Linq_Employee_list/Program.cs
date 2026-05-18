@@ -27,6 +27,15 @@ namespace Linq_Employee_list
         static void Main(string[] args)
         {
             var salary = Employees.Where(e => e.Department == "Engineering").OrderByDescending(e => e.Salary).ToList();
+            
+            foreach (var employee in salary)
+                Console.WriteLine($"{employee.Name} {employee.Department}: €{employee.Salary}");
+            
+            var averageSalary = Employees.Average(e => e.Salary);
+
+            Console.WriteLine($"Average salary: {averageSalary:N2}");
+            
+            var highestSalary = Employees.Max(e => e.Salary);
         }
     }
 }
