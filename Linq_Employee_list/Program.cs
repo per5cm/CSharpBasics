@@ -32,10 +32,19 @@ namespace Linq_Employee_list
                 Console.WriteLine($"{employee.Name} {employee.Department}: €{employee.Salary}");
             
             var averageSalary = Employees.Average(e => e.Salary);
-
+            
             Console.WriteLine($"Average salary: {averageSalary:N2}");
             
-            var highestSalary = Employees.Max(e => e.Salary);
+            var highestSalary = Employees.GroupBy(e => e.Department)
+                .Select(g => new { Department = g.Key, Salary = g.Max(e => e.Salary) });
+            
+            foreach (var highest in highestSalary)
+                Console.WriteLine($"{highest.Department}: Highest Salary - €{highest.Salary}");
+
+            var highRoller = Employees.Where(e => e.Salary > 80000);
+            
+            foreach (var e in highRoller)
+                Console.WriteLine($"{e.Name} {e.Department}: €{e.Salary}");
         }
     }
 }
