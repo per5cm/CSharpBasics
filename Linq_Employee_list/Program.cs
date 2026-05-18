@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Linq_Employee_list
 {
@@ -6,15 +9,15 @@ namespace Linq_Employee_list
     {
         record Employee(string Name, string Department, decimal Salary);
 
-        List<Employee> employees = new()
-        {
+        private static readonly List<Employee> Employees = 
+        [
             new Employee(Name:"Alice",Department:"Marketing", Salary:72000),
             new Employee(Name:"Bob",Department:"Engineering", Salary:95000),
             new Employee(Name:"Charlie",Department:"Engineering", Salary:11000),
             new Employee(Name:"Karen",Department:"HR", Salary:68000),
             new Employee(Name:"Eve",Department:"Engineering", Salary:88000),
             new Employee(Name:"Frank",Department:"Marketing", Salary:79000),
-        };
+        ];
         
         // 1. Get all Engineering employees, ordered by salary descending
         // 2. Get the average salary across all employees
@@ -23,7 +26,7 @@ namespace Linq_Employee_list
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var salary = Employees.Where(e => e.Department == "Engineering").OrderByDescending(e => e.Salary).ToList();
         }
     }
 }
