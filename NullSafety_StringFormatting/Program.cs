@@ -16,7 +16,7 @@ namespace NullSafety_StringFormatting
             Console.WriteLine(GetGreeting(newUser));
         }
 
-        static string GetGreeting(User user)
+        private static string GetGreeting(User user)
         {
             // coalescing
             // If FirstName is null → use "stranger"
