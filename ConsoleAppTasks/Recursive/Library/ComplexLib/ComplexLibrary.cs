@@ -43,7 +43,7 @@ namespace Recursive.Library.ComplexLib
             else
                 Console.WriteLine($"{complex.Real}{sign}{absIn}i");
         }
-        internal static Complex AdditionComplex(Complex complex1, Complex complex2)
+        private static Complex AdditionComplex(Complex complex1, Complex complex2)
         {
             // (a + b * i) + (c + d * i) = (a + c) + (b + d) * i
 
@@ -69,7 +69,7 @@ namespace Recursive.Library.ComplexLib
             return new Complex(realPart, imaginaryPart);
         }
 
-        internal static Complex MultiplicationComplex(Complex complex1, Complex complex2)
+        private static Complex MultiplicationComplex(Complex complex1, Complex complex2)
         {
             // (a + b · i) · (c + d · i) = (a · c – b · d) + (a · d + b · c) · i
 
@@ -94,7 +94,7 @@ namespace Recursive.Library.ComplexLib
             return new Complex(realPart, imaginaryPart);
         }
 
-        internal static double Norm(Complex complex)
+        private static double Norm(Complex complex)
         {
             double square = (complex.Real * complex.Real + complex.Imaginary * complex.Imaginary);
 
