@@ -50,16 +50,16 @@
         internal static void EvenOrOddLoop()
         {
             Console.WriteLine("Enter a number between 0 and 100: ");
-            int number = int.Parse(Console.ReadLine());
+            string? number = Console.ReadLine();
 
-            if (number < 0)
+            if (!int.TryParse(number, out int evenOrOdd) || evenOrOdd < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(number), "number cannot be negative");
+                throw new ArgumentNullException(nameof(evenOrOdd), "number cannot be negative");
             }
 
             while (true)
             {
-                if (number % 2 == 0)
+                if (evenOrOdd % 2 == 0)
                 {
                     Console.WriteLine("number is even");
                 }
