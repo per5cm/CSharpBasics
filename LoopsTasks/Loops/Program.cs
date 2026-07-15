@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace Loops
 {
@@ -11,7 +9,9 @@ namespace Loops
             //WhileLoop.DivisibleNumber();
             //WhileLoop.AverageGrade();
             //ForLoop.UglyFor();
-            ForLoop.DuePay();
+            // ForLoop.DuePay();
+            
+            ForLoop.PrintNumbers();
         }
     }
 }

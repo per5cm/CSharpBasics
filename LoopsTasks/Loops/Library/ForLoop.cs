@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Loops
+﻿namespace Loops
 {
     internal class ForLoop
     {
@@ -44,6 +39,19 @@ namespace Loops
 
         Error:
             Console.WriteLine("Invalid input. Try again.");
+        }
+
+        internal static void PrintNumbers()
+        {
+            for (int i = 0; i <= 20; i++)
+            {
+                Console.WriteLine($"print: {i}");
+            }
+        }
+
+        internal static void EvenOrOdd(int number = 20)
+        {
+            
         }
     }
 }
