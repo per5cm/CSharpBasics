@@ -13,7 +13,7 @@ namespace Loops
             
             // ForLoop.PrintNumbers();
             
-            ForEachLoop.EvenOrOddLoop();
+            WhileLoop.EvenOrOddLoop();
         }
     }
 }

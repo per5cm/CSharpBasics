@@ -44,7 +44,30 @@
             } while (grades != 0);
 
             Console.WriteLine($"Anzahl Noten {count}, Summe der Noten {total}");
-            Console.WriteLine($"Durschnitt - {total / count}");
+            Console.WriteLine($"Durchschnitt - {total / count}");
+        }
+
+        internal static void EvenOrOddLoop()
+        {
+            Console.WriteLine("Enter a number between 0 and 100: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(number), "number cannot be negative");
+            }
+
+            while (true)
+            {
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("number is even");
+                }
+                else
+                    Console.WriteLine("number is odd");
+
+                break;
+            }
         }
     }
 }
