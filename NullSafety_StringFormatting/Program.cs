@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NullSafety_StringFormatting
+﻿namespace NullSafety_StringFormatting
 {
     internal class Program
     {

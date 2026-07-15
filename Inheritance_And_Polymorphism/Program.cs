@@ -1,5 +1,4 @@
 ﻿using Inheritance_And_Polymorphism.Library;
-using System;
 
 namespace Inheritance_And_Polymorphism
 {

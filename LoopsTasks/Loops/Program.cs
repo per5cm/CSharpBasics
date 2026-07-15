@@ -8,10 +8,10 @@ namespace Loops
         {
             //WhileLoop.DivisibleNumber();
             //WhileLoop.AverageGrade();
-            //ForLoop.UglyFor();
+            ForLoop.UglyFor();
             // ForLoop.DuePay();
             
-            ForLoop.PrintNumbers();
+            // ForLoop.PrintNumbers();
         }
     }
 }

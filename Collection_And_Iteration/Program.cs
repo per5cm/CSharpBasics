@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-
-namespace Collection_And_Iteration
+﻿namespace Collection_And_Iteration
 {
     internal class Program
     {
