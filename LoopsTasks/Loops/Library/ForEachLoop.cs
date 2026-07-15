@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace Loops
+﻿namespace Loops
 {
     internal class ForEachLoop
     {
@@ -8,13 +6,18 @@ namespace Loops
         {
             Console.WriteLine("Enter a number between 0 and 100: ");
             int number = int.Parse(Console.ReadLine());
+
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(number), "number cannot be negative");
+            }
             
             if (number % 2 == 0)
             {
-                Console.WriteLine("even");
+                Console.WriteLine("number is even");
             }
             else
-                Console.WriteLine("odd");
+                Console.WriteLine("number is odd");
         }
     }
 }
