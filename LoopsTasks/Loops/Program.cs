@@ -1,4 +1,4 @@
-﻿
+﻿using Loops.Library;
 
 namespace Loops
 {
@@ -6,7 +6,9 @@ namespace Loops
     {
         internal static void Main(string[] args)
         {
-           
+           // ForLoop.Ex1_1();
+           // WhileLoop.Ex1_2();
+           DoWhile.Ex1_3();
         }
     }
 }
