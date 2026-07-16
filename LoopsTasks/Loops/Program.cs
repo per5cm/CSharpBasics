@@ -6,14 +6,7 @@ namespace Loops
     {
         internal static void Main(string[] args)
         {
-            //WhileLoop.DivisibleNumber();
-            //WhileLoop.AverageGrade();
-            // ForLoop.UglyFor();
-            // ForLoop.DuePay();
-            
-            // ForLoop.PrintNumbers();
-            
-            WhileLoop.EvenOrOddLoop();
+           
         }
     }
 }
