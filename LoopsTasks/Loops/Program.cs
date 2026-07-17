@@ -8,7 +8,9 @@ namespace Loops
         {
            // ForLoop.Ex1_1();
            // WhileLoop.Ex1_2();
-           DoWhile.Ex1_3();
+           // DoWhile.Ex1_3();
+           // ForLoop.Ex1_4();
+           ForEachLoop.Ex1_5();
         }
     }
 }
