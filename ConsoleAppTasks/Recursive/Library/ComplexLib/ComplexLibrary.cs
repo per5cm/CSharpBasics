@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Recursive.Library.ComplexLib
+﻿namespace Recursive.Library.ComplexLib
 
 /*
     Eigenschaft	    struct	        class

@@ -1,9 +1,5 @@
-﻿using Recursive.Library;
-using SixLabors.ImageSharp;
+﻿using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Recursive.Library.ComplexLib
 {

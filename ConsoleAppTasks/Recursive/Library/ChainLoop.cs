@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Recursive.Library
+﻿namespace Recursive.Library
 {
     internal class ChainLoop
     {

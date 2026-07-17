@@ -1,10 +1,4 @@
 ﻿
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using SixLabors.ImageSharp.Formats.Png;
-using Recursive.Library;
-using System.Security.Cryptography;
 using Recursive.Library.ComplexLib;
 
 namespace Recursive
