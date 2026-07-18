@@ -55,5 +55,39 @@
                 Console.WriteLine();
             }
         }
+
+        internal static void Ex2_4()
+        {
+            for (int row = 1; row <= 6; row++)
+            {
+                for (int col = 1; col <= 6; col++)
+                {
+                    if (row >= col)
+                    {
+                        Console.Write("*");
+                    }
+                }
+                
+                Console.WriteLine();
+            }
+        }
+
+        internal static void Ex2_5()
+        {
+            int[] data = { 4, 8, 15, 16, 23, 42 };
+            int target = 16;
+            int foundAt = -1;
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (target == data[i]);
+                {
+                    foundAt = i;
+                    break;
+                }
+            }
+            
+            Console.WriteLine($"index found at: {foundAt}");
+        }
     }
 }
