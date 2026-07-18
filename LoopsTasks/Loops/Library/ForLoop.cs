@@ -100,14 +100,19 @@
             };
 
             int grand = 0;
-            for (int row = 0; row < 3; row++)
+            for (int row = 0; row < grid.GetLength(0); row++)
             {
                 int rowSum = 0;
-                for (int col = 0; col < 4; col++)
+                for (int col = 0; col < grid.GetLength(1); col++)
                 {
-                    
+                    rowSum += grid[row, col];
                 }
+
+                Console.WriteLine($"row sum: {rowSum}");
+                grand += rowSum;
             }
+            
+            Console.WriteLine($"grand total: {grand}");
         }
     }
 }
