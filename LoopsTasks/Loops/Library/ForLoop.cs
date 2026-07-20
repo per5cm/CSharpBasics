@@ -114,5 +114,26 @@
             
             Console.WriteLine($"grand total: {grand}");
         }
+
+        internal static void Ex3_2()
+        {
+            int[] array = { 5, 2, 9, 1, 7, 3 };
+            
+            for (int pass = 0; pass < array.Length - 1; pass++)
+            {
+                for (int i = 0; i < array.Length - 1 - pass; i++)
+                {
+                    if (array[i] > array[i + 1])
+                    {
+                        (array[i], array[i + 1]) = (array[i + 1], array[i]);
+                    }
+                }
+            }
+            
+            Console.WriteLine("Sorted Array: ");
+            string s = string.Join(", ", array);
+            Console.WriteLine($"Values: {s}");
+
+        }
     }
 }

@@ -17,7 +17,8 @@ namespace Loops
            // ForLoop.Ex2_4();
            // ForLoop.Ex2_5();
            // ForEachLoop.Ex2_6();
-           ForLoop.Ex3_1();
+           // ForLoop.Ex3_1();
+           ForLoop.Ex3_2();
         }
     }
 }
