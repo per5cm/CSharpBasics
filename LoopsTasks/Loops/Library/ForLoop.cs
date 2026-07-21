@@ -133,7 +133,29 @@
             Console.WriteLine("Sorted Array: ");
             string s = string.Join(", ", array);
             Console.WriteLine($"Values: {s}");
+        }
 
+        internal static void Ex3_3()
+        {
+            for (int n = 2; n <= 50; n++)
+            {
+                bool isPrime = true;
+                for (int d = 2; d * d <= n; d++)
+                {
+                    if (n % d == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                    
+                }
+                
+                if (n == 0)
+                {
+                    isPrime = true;
+                    Console.WriteLine($"Is prime number: {n}");
+                }
+            }
         }
     }
 }
