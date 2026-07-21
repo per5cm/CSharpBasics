@@ -36,6 +36,28 @@
                 Console.Write(e + "," + running + ":");
             }
         }
+        
+        internal static void Ex3_4()
+        {
+            string sentence = "the cat sat on the mat the cat ran";
+            string[] raw = sentence.Split(' ');
+
+            var words = new List<string>();
+            
+            // Stage A
+            foreach (var w in raw)
+            {
+                words.Add(w.ToLower());
+            }
+
+            var counts = new Dictionary<string, int>();
+            
+            // Stage B
+            foreach (var w in words)
+            {
+                
+            }
+        }
     }
 }
 
