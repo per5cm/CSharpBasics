@@ -145,16 +145,12 @@
                     if (n % d == 0)
                     {
                         isPrime = false;
+                        Console.WriteLine($"Not prime number: {n}");
                         break;
                     }
-                    
                 }
                 
-                if (n == 0)
-                {
-                    isPrime = true;
-                    Console.WriteLine($"Is prime number: {n}");
-                }
+                if (isPrime) Console.WriteLine($"Is prime number: {n}");
             }
         }
     }
