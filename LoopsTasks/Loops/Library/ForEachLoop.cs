@@ -72,7 +72,7 @@
             {
                 if (kvp.Value >= max)
                 {
-                    max++;
+                    max = kvp.Value;
                 }
             }
             
