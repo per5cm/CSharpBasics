@@ -153,5 +153,32 @@
                 if (isPrime) Console.WriteLine($"Is prime number: {n}");
             }
         }
+
+        internal static void Ex3_5()
+        {
+            int[,] grid =
+            {
+                {3, 7, 1},
+                {9, 4, 6},
+                {2, 8, 5},
+            };
+            int target = 4;
+
+            bool found = false;
+            for (int row = 0; row < grid.GetLength(0) && !found; row++)
+            {
+                for (int col = 0; col < grid.GetLength(1); col++)
+                {
+                    if (grid[row, col] == target)
+                    {
+                        Console.WriteLine($"Target found in row: {row}, column: {col}");
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) Console.WriteLine("Not found!");
+            }
+        }
     }
 }

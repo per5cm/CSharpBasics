@@ -39,7 +39,7 @@
         
         internal static void Ex3_4()
         {
-            string sentence = "the cat sat on the mat the cat ran";
+            string sentence = "the cat sat on the mat the cat ran the matt";
             string[] raw = sentence.Split(' ');
 
             var words = new List<string>();
