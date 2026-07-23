@@ -21,13 +21,11 @@
                 if (n % 2 == 0)
                 {
                     n = (n / 2);
-                    Console.WriteLine("Even");
                 }
 
-                if (n % 2 != 0)
+                else //(n % 2 != 0)
                 {
-                    n = (3 * n + 1);
-                    Console.WriteLine("Odd");
+                    n = n * 3 + 1;
                 }
                 
                 steps++;
