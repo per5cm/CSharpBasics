@@ -55,7 +55,34 @@
             // Stage B
             foreach (var w in words)
             {
-                
+                if (counts.ContainsKey(w))
+                {
+                    counts[w] += 1;
+                }
+                else
+                {
+                    counts.Add(w, 1);
+                }
+            }
+
+            int max = 0;
+            
+            // Stage C
+            foreach (var kvp in counts)
+            {
+                if (kvp.Value >= max)
+                {
+                    max++;
+                }
+            }
+            
+            // Stage D
+            foreach (var kvp in counts)
+            {
+                if (kvp.Value == max)
+                {
+                    Console.WriteLine($"Word: {kvp}");
+                }
             }
         }
     }
