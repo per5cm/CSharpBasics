@@ -14,7 +14,7 @@
 
         internal static void Ex3_6()
         {
-            long n = 27;
+            long n = 81;
             int steps = 0;
             while (n != 1)
             {
