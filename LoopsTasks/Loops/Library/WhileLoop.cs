@@ -14,20 +14,22 @@
 
         internal static void Ex3_6()
         {
-            long n = 1;
+            long n = 27;
             int steps = 0;
-            while (n <= 27)
+            while (n != 1)
             {
                 if (n % 2 == 0)
                 {
-                    Console.Write("Even");
+                    n = (n / 2);
+                    Console.WriteLine("Even");
                 }
 
                 if (n % 2 != 0)
                 {
-                    Console.Write("Odd");
+                    n = (3 * n + 1);
+                    Console.WriteLine("Odd");
                 }
-
+                
                 steps++;
             }
             
