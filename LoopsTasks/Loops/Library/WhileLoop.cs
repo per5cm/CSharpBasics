@@ -33,5 +33,10 @@
             
             Console.WriteLine($"Steps: {steps}");
         }
+
+        internal static void B_1()
+        {
+            
+        }
     }
 }
