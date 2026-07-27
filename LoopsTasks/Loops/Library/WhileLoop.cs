@@ -39,16 +39,17 @@
             int n = 9384;
             int sum = 0;
 
-            while (true)
+            while (n > 0)
             {
-                n = (n % 10);
-
+                sum = n % 10;
+                
                 sum += n;
-
-                n = (n / 10);
+                
+                sum = n / 10;
+                
                 
                 Console.WriteLine($"Current sum: {sum}");
-                break;
+                
             }
             
             Console.WriteLine($"Total sum: {sum}");
