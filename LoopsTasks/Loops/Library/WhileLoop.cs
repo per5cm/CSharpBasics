@@ -36,9 +36,11 @@
 
         internal static void B_1()
         {
-            int n = 9384;
+            int n = -9384;
             int sum = 0;
 
+            n = Math.Abs(n);
+            
             while (n != 0)
             {
                 int temp = n % 10;
