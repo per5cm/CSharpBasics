@@ -41,15 +41,11 @@
 
             while (n > 0)
             {
-                sum = n % 10;
+                int temp = n % 10;
                 
-                sum += n;
+                sum += temp;
                 
-                sum = n / 10;
-                
-                
-                Console.WriteLine($"Current sum: {sum}");
-                
+                n = (n / 10);
             }
             
             Console.WriteLine($"Total sum: {sum}");
