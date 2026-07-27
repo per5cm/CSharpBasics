@@ -36,7 +36,22 @@
 
         internal static void B_1()
         {
+            int n = 9384;
+            int sum = 0;
+
+            while (true)
+            {
+                n = (n % 10);
+
+                sum += n;
+
+                n = (n / 10);
+                
+                Console.WriteLine($"Current sum: {sum}");
+                break;
+            }
             
+            Console.WriteLine($"Total sum: {sum}");
         }
     }
 }
