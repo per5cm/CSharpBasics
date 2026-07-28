@@ -31,7 +31,7 @@ namespace Loops.Library
                 {
                     case "1": Console.WriteLine("Hello there, we have no pizza!"); continue;
                     case "2": Console.WriteLine("Just no, im not a swiss watch!"); continue;
-                    case "3": Console.WriteLine("Bye!"); break;
+                    case "3": Console.WriteLine("Bye!"); continue;
                     
                     default: Console.WriteLine("No case match!"); continue;
                 }
