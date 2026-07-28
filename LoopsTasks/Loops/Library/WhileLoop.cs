@@ -63,7 +63,7 @@
                 Console.Write("Enter 1-100: ");
                 string? input = Console.ReadLine();
 
-                int.TryParse(input, out value);
+                // int.TryParse(input, out value);
 
                 if (!int.TryParse(input, out value))
                 {
