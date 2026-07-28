@@ -52,5 +52,37 @@
             
             Console.WriteLine($"Total sum: {sum}");
         }
+
+        internal static void B_2()
+        {
+            int value = 0;
+            bool valid = false;
+
+            while (!valid)
+            {
+                Console.Write("Enter 1-100: ");
+                string? input = Console.ReadLine();
+
+                int.TryParse(input, out value);
+
+                if (!int.TryParse(input, out value))
+                {
+                    Console.WriteLine("Parse failed. You caught it without exception.");
+                    continue;
+                }
+                
+                if (int.TryParse(input, out value) && value < 0 || value > 100)
+                {
+                    Console.WriteLine("Parse is out of Range. Again!");
+                }
+
+                else
+                {
+                    valid = true;
+                }
+            }
+            
+            Console.WriteLine($"Your input was correct: {value}");
+        }
     }
 }
