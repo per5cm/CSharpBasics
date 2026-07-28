@@ -17,5 +17,26 @@ namespace Loops.Library
             
             Console.WriteLine($"Thanks, number is even: {n}");
         }
+        
+        internal static void ExB_4()
+        {
+            string? choice;
+            do
+            {
+                Console.WriteLine("\n1) Greet 2) Current Time 3) Quit");
+                Console.Write("Choice: ");
+                choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1": Console.WriteLine("Hello there, we have no pizza!"); continue;
+                    case "2": Console.WriteLine("Just no, im not a swiss watch!"); continue;
+                    case "3": Console.WriteLine("Bye!"); break;
+                    
+                    default: Console.WriteLine("No case match!"); continue;
+                }
+
+            } while (choice != "3");
+        }
     }
 }

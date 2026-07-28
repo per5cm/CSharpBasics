@@ -34,7 +34,7 @@
             Console.WriteLine($"Steps: {steps}");
         }
 
-        internal static void B_1()
+        internal static void ExB_1()
         {
             int n = -9384;
             int sum = 0;
@@ -53,7 +53,7 @@
             Console.WriteLine($"Total sum: {sum}");
         }
 
-        internal static void B_2()
+        internal static void ExB_2()
         {
             int value = 0;
             bool valid = false;
@@ -85,7 +85,7 @@
             Console.WriteLine($"Your input was correct: {value}");
         }
 
-        internal static void B_3()
+        internal static void ExB_3()
         {
             int count = 0;
             int sum = 0;
