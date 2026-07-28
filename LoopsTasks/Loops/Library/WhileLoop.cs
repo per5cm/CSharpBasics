@@ -84,5 +84,29 @@
             
             Console.WriteLine($"Your input was correct: {value}");
         }
+
+        internal static void B_3()
+        {
+            int count = 0;
+            int sum = 0;
+            int input;
+
+            while (true)
+            {
+                Console.Write("Number (-1 to finish): ");
+                string? stringInput = Console.ReadLine();
+
+                int.TryParse(stringInput, out input);
+
+                if (input == -1) break;
+                if (int.TryParse(stringInput, out input) || input != -1)
+                {
+                    sum += input;
+                    count++;
+                }
+            }
+            
+            Console.WriteLine($"input count: {count}, total sum: {sum}");
+        }
     }
 }
