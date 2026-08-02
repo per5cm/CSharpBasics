@@ -38,6 +38,18 @@ namespace Loops.Library
 
             } while (choice != "3");
         }
-        
+
+        internal static void ExB_5()
+        {
+            double guess = 1.0;
+            double previous;
+            int iterations = 0;
+
+            do
+            {
+                previous = guess;
+
+            } while ();
+        }
     }
 }
