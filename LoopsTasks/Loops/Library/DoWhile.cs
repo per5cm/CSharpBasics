@@ -48,6 +48,7 @@ namespace Loops.Library
             do
             {
                 previous = guess;
+                
 
             } while ();
         }
