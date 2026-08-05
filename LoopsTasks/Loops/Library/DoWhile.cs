@@ -55,7 +55,7 @@ namespace Loops.Library
             } while (Math.Abs(guess - previous) > 0.0000001);
             
             Console.WriteLine($"Final result: {guess}");
-            Console.WriteLine($"Method of Math square: {guess - Math.Sqrt(2)}");
+            Console.WriteLine($"Method of Math square: {Math.Sqrt(2)}");
         }
     }
 }
