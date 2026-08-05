@@ -112,13 +112,17 @@
         internal static void ExB_6()
         {
             int a = 10000, b = 3;
+            int iterationSubstraction = 0;
+            int iterationModulo = 0;
+            ;
 
-            // Euclids substraction.
-            // while (a != b)
-            // {
-            //     if (a > b) a -= b;
-            //     if (a < b) b -= a;
-            // }
+            // Euclids GCD - substraction.
+            while (a != b)
+            {
+                if (a > b) a -= b;
+                if (a < b) b -= a;
+                iterationSubstraction++;
+            }
 
             // Shorthand Modulo variant - less steps than substraction.
             while (b != 0)
@@ -126,9 +130,10 @@
                 int temp = b;
                 b = a % b;
                 a = temp;
+                iterationModulo++;
             }
             
-            Console.WriteLine($"Result: {a | b}");
+            Console.WriteLine($"Result: {a | b}, Iterations for substraction: {iterationSubstraction}, Iterations for Modulo: {iterationModulo}");
         }
     }
 }
