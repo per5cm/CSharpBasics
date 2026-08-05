@@ -111,7 +111,7 @@
 
         internal static void ExB_6()
         {
-            int a = 6, b = 20;
+            int a = 10000, b = 3;
 
             // Euclids substraction.
             // while (a != b)
@@ -119,6 +119,14 @@
             //     if (a > b) a -= b;
             //     if (a < b) b -= a;
             // }
+
+            // Shorthand Modulo variant - less steps than substraction.
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
             
             Console.WriteLine($"Result: {a | b}");
         }
