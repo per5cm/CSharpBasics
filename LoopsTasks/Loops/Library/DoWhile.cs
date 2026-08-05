@@ -47,6 +47,7 @@ namespace Loops.Library
 
             do
             {
+                // Newtons Method
                 previous = guess;
                 guess = (guess + 2 / guess) / 2;
                 iterations++;
