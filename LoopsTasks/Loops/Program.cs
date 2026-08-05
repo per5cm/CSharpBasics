@@ -27,7 +27,8 @@ namespace Loops
            // WhileLoop.B_2();
            // WhileLoop.ExB_3();
            // DoWhile.ExB_4();
-           DoWhile.ExB_5();
+           // DoWhile.ExB_5();
+           WhileLoop.ExB_6();
         }
     }
 }

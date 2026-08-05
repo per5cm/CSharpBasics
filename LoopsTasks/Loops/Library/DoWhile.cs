@@ -1,6 +1,6 @@
 namespace Loops.Library
 {
-    internal class DoWhile
+    internal static class DoWhile
     {
         internal static void Ex1_3()
         {

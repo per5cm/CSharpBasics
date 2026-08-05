@@ -108,5 +108,18 @@
             
             Console.WriteLine($"input count: {count}, total sum: {sum}");
         }
+
+        internal static void ExB_6()
+        {
+            int a = 6, b = 20;
+
+            while (a != b)
+            {
+                if (a > b) a -= b;
+                if (a < b) b -= a;
+            }
+            
+            Console.WriteLine($"Result: {a | b}");
+        }
     }
 }
