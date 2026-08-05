@@ -48,10 +48,14 @@ namespace Loops.Library
             do
             {
                 previous = guess;
-                
-                
+                guess = (guess + 2 / guess) / 2;
+                iterations++;
+                Console.WriteLine($"Iterations: {iterations}, Guess: {guess}");
 
-            } while ();
+            } while (Math.Abs(guess - previous) > 0.0000001);
+            
+            Console.WriteLine($"Final result: {guess}");
+            Console.WriteLine($"Method of Math square: {guess - Math.Sqrt(2)}");
         }
     }
 }
