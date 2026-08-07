@@ -19,7 +19,7 @@ namespace Loops
            // ForEachLoop.Ex2_6();
            // ForLoop.Ex3_1();
            // ForLoop.Ex3_2();
-           ForLoop.Ex3_3();
+           // ForLoop.Ex3_3();
            // ForEachLoop.Ex3_4();
            // ForLoop.Ex3_5();
            // WhileLoop.Ex3_6();
@@ -28,7 +28,7 @@ namespace Loops
            // WhileLoop.ExB_3();
            // DoWhile.ExB_4();
            // DoWhile.ExB_5();
-           // WhileLoop.ExB_6();
+           WhileLoop.ExB_6();
         }
     }
 }
