@@ -135,5 +135,13 @@
             
             Console.WriteLine($"Result: {a | b}, Iterations for substraction: {iterationSubstraction}, Iterations for Modulo: {iterationModulo}");
         }
+
+        internal static void ExB_7()
+        {
+            var queue = new Queue<string>(new[] { "alpha", "beta", "gamma" });
+            var rng = new Random(42);
+            
+            
+        }
     }
 }
