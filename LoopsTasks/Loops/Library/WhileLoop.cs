@@ -140,8 +140,19 @@
         {
             var queue = new Queue<string>(new[] { "alpha", "beta", "gamma" });
             var rng = new Random(42);
-            
-            
+
+            while (true)
+            {
+                string task = queue.Dequeue();
+                int attempt = 0;
+                bool success = false;
+
+                while (!success && attempt < 5)
+                {
+                    attempt++;
+                    
+                }
+            }
         }
     }
 }
