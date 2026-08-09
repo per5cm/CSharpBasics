@@ -154,8 +154,8 @@
                     Console.WriteLine($"Attempts: {attempt}");
                 }
                 
-                if (success) Console.WriteLine($"Task success: {task}, {success}");
-                if (!success) Console.WriteLine($"Task failed: {task}, {success}");
+                if (success) Console.WriteLine($"Task success: {task}, {success}, attempts: {attempt}");
+                if (!success) Console.WriteLine($"Task failed: {task}, {success}, attempts {attempt}");
             }
         }
     }
