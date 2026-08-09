@@ -141,7 +141,7 @@
             var queue = new Queue<string>(new[] { "alpha", "beta", "gamma" });
             var rng = new Random(42);
 
-            while (true)
+            while (queue.Count > 0)
             {
                 string task = queue.Dequeue();
                 int attempt = 0;
@@ -150,8 +150,12 @@
                 while (!success && attempt < 5)
                 {
                     attempt++;
-                    
+                    if (rng.Next(0, 6) == 0)  success = true;
+                    Console.WriteLine($"Attempts: {attempt}");
                 }
+                
+                if (success) Console.WriteLine($"Task success: {task}, {success}");
+                if (!success) Console.WriteLine($"Task failed: {task}, {success}");
             }
         }
     }
