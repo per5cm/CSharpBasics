@@ -10,7 +10,7 @@ internal class Book
 
     internal Book(string title, int pages)
     {
-        Title= title;
+        Title = title;
         Pages = pages;
     }
 

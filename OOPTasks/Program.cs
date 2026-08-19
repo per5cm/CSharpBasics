@@ -11,9 +11,17 @@ namespace OOPTasks
             alchemist.Describe();
             
             // 1.4
-            BankAccount account = new BankAccount();
-            account.Deposit(-500);
-            account.Withdraw(-200);
+            // BankAccount account = new BankAccount();
+            // account.Deposit(-500);
+            // account.Withdraw(-200);
+
+            Counter  a = new Counter(0);
+            Counter b = new Counter(0);
+            
+            a.Increment();
+            b.Increment();
+            b.Reset();
+            Console.WriteLine($"output a: {a.Value}, output b: {b.Value}");
         }
     }
 }
