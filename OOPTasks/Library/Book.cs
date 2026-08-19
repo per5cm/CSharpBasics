@@ -6,7 +6,7 @@ internal class Book
     // private readonly int _pages;
 
     private string Title { get; set; }
-    private int Pages { get; set; }
+    internal int Pages { get; private set; }
 
     internal Book(string title, int pages)
     {
