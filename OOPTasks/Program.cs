@@ -27,6 +27,8 @@ namespace OOPTasks
             Point a = new Point(1, 1);
             Point b = a;
             b.Move(5, 5);
+            
+            Console.WriteLine($"a position: {a.X}, b position: {b.X}");
         }
     }
 }
