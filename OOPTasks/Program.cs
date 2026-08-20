@@ -15,13 +15,18 @@ namespace OOPTasks
             // account.Deposit(-500);
             // account.Withdraw(-200);
 
-            Counter  a = new Counter(0);
-            Counter b = new Counter(0);
-            
-            a.Increment();
-            b.Increment();
-            b.Reset();
-            Console.WriteLine($"output a: {a.Value}, output b: {b.Value}");
+            // 1.5
+            // Counter  a = new Counter(0);
+            // Counter b = new Counter(0);
+            //
+            // a.Increment();
+            // b.Increment();
+            // b.Reset();
+            // Console.WriteLine($"output a: {a.Value}, output b: {b.Value}");
+
+            Point a = new Point(1, 1);
+            Point b = a;
+            b.Move(5, 5);
         }
     }
 }
