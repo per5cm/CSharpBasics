@@ -29,8 +29,13 @@ namespace OOPTasks
             b.Move(5, 5);
             
             Console.WriteLine($"a position: {a.X}, b position: {b.X}");
+            
+            // 2.2 static members
 
             MathUtils.Square(1);
+            MathUtils.Square(2);
+            MathUtils.Square(3);
+            Console.WriteLine(MathUtils.CallCount);
         }
     }
 }

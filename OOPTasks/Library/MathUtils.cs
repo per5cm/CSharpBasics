@@ -1,6 +1,6 @@
 namespace OOPTasks.Library;
 
-public class MathUtils
+public static class MathUtils
 {
     public static int CallCount;
 
