@@ -29,6 +29,8 @@ namespace OOPTasks
             b.Move(5, 5);
             
             Console.WriteLine($"a position: {a.X}, b position: {b.X}");
+
+            MathUtils.Square(1);
         }
     }
 }
