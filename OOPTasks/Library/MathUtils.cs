@@ -1,0 +1,12 @@
+namespace OOPTasks.Library;
+
+public class MathUtils
+{
+    public static int CallCount;
+
+    public static int Square(int n)
+    {
+        CallCount++;
+        return n * n;
+    }
+}
