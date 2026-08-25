@@ -52,7 +52,7 @@ namespace OOPTasks
             // 2.6
 
             Manager bob = new Manager(salary: 200, bonus:20);
-            Console.WriteLine(bob.GrossPay());
+            Console.WriteLine($"Salary: {bob.Salary}, Bonus {bob.Bonus}, Total: {bob.GrossPay()}");
         }
     }
 }

@@ -3,8 +3,9 @@ namespace OOPTasks.Library;
 public class Employee
 {
     private readonly decimal _baseSalary;
+    public decimal Salary => _baseSalary;
 
-    public Employee(decimal salary)
+    protected Employee(decimal salary)
     {
         _baseSalary = salary;
     }
