@@ -48,6 +48,11 @@ namespace OOPTasks
 
             Car newCar = new Car(make:"Ford", door:4);
             Console.WriteLine($"{newCar.Make}, {newCar.Door}");
+            
+            // 2.6
+
+            Manager bob = new Manager(salary: 200, bonus:20);
+            Console.WriteLine(bob.GrossPay());
         }
     }
 }
