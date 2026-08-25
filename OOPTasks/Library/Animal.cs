@@ -3,7 +3,7 @@ namespace OOPTasks.Library;
 public class Animal
 {
     protected string Name { get; init; }
-    internal int Energy { get; set; }
+    protected int Energy { get; set; }
 
     protected Animal(string name, int energy)
     {

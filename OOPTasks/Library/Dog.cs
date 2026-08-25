@@ -10,6 +10,6 @@ public class Dog : Animal
     public void Fetch(int reduce = 10 )
     {
         Energy -= reduce;
-        Console.WriteLine($"Dog named {Name} fetches the ball and looses {reduce} energy.");
+        Console.WriteLine($"Dog named {Name} fetches the ball and looses {reduce} energy now it has {Energy} left.");
     }
 }
