@@ -43,6 +43,11 @@ namespace OOPTasks
             Console.WriteLine(husky);
             husky.Speak();
             husky.Fetch();
+            
+            // 2.5
+
+            Car newCar = new Car(make:"Ford", door:4);
+            Console.WriteLine($"{newCar.Make}, {newCar.Door}");
         }
     }
 }
