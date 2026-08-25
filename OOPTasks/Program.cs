@@ -37,9 +37,10 @@ namespace OOPTasks
             MathUtils.Square(3);
             Console.WriteLine(MathUtils.CallCount);
             
-            // 2.3
-
+            // 2.3, 2.4
+    
             Dog husky = new Dog(name:"Bob", energy:100);
+            Console.WriteLine(husky);
             husky.Speak();
             husky.Fetch();
         }

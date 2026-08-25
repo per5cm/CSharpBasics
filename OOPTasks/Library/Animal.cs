@@ -10,9 +10,12 @@ public class Animal
         Name = name;
         Energy = energy;
     }
-
+    public override string ToString()
+    {
+        return $"Animal named: {Name} was created, it has {Energy} energy.";
+    }
     public void Speak()
     {
-        Console.WriteLine($"Dog named {Name}, makes a sound.");
+        Console.WriteLine($"Animal named {Name}, makes a sound.");
     }
 }
