@@ -39,7 +39,7 @@ namespace OOPTasks
             
             // 2.3
 
-            Dog husky = new Dog("Bob");
+            Dog husky = new Dog(name:"Bob", energy:100);
             husky.Speak();
             husky.Fetch();
         }

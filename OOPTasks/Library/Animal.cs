@@ -2,15 +2,17 @@ namespace OOPTasks.Library;
 
 public class Animal
 {
-    public string Name { get; init; }
+    protected string Name { get; init; }
+    internal int Energy { get; set; }
 
-    public Animal(string name)
+    protected Animal(string name, int energy)
     {
         Name = name;
+        Energy = energy;
     }
 
     public void Speak()
     {
-        Console.WriteLine($"{Name} make a sound.");
+        Console.WriteLine($"Dog named {Name}, makes a sound.");
     }
 }

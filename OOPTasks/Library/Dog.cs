@@ -2,12 +2,14 @@ namespace OOPTasks.Library;
 
 public class Dog : Animal
 {
-    public Dog(string name) : base(name)
+    public Dog(string name, int energy) : base(name, energy)
     {
         Name = name;
+        Energy = energy;
     }
-    public void Fetch()
+    public void Fetch(int reduce = 10 )
     {
-        Console.WriteLine($" Dog named {Name} fetches the ball");
+        Energy -= reduce;
+        Console.WriteLine($"Dog named {Name} fetches the ball and looses {reduce} energy.");
     }
 }
