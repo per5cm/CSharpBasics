@@ -53,6 +53,14 @@ namespace OOPTasks
 
             Manager bob = new Manager(salary: 200, bonus:20);
             Console.WriteLine($"Salary: {bob.Salary}, Bonus {bob.Bonus}, Total: {bob.GrossPay()}");
+            
+            // 3.1
+
+            Shape shape = new Circle(6);
+            Shape shape2 = new Rectangle(3, 4);
+            
+            shape.Print();
+            shape2.Print();
         }
     }
 }
