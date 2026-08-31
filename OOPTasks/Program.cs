@@ -56,11 +56,26 @@ namespace OOPTasks
             
             // 3.1
 
-            Shape shape = new Circle(6);
-            Shape shape2 = new Rectangle(3, 4);
+            // Shape shape = new Circle(6);
+            // Shape shape2 = new Rectangle(3, 4);
             
-            shape.Print();
-            shape2.Print();
+            // shape.Print();
+            // shape2.Print();
+            
+            // 3.2 Ex3_3
+
+            var shape = new List<Shape>
+            {
+                new Circle(2),
+                new Rectangle(3,4),
+                new Circle(4),
+                new Rectangle(6,12)
+            };
+
+            foreach (Shape structure in shape)
+            {
+                structure.Print();
+            }
         }
     }
 }
