@@ -76,6 +76,10 @@ namespace OOPTasks
             {
                 structure.Print();
             }
+            
+            // 3.4
+            
+            
         }
     }
 }
