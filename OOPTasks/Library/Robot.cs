@@ -14,6 +14,6 @@ public class Robot : IMovable, IDescribable
 
     public string ToText()
     {
-        return Console.WriteLine($"Robot at: {Move(1, 1)}");
+        return $"Robot X position at: {_x}, Robot Y position at: {_y}";
     }
 }

@@ -78,8 +78,10 @@ namespace OOPTasks
             }
             
             // 3.4
-            
-            
+
+            var arnold = new Robot();
+            arnold.Move(2,2);
+            Console.WriteLine(arnold.ToText());
         }
     }
 }
