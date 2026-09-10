@@ -1,6 +1,6 @@
 namespace OOPTasks.Library;
 
-// IMovable, IDescribable
+// IMovable, IDescribable, Report
 
 public class Robot : IMovable, IDescribable
 {
