@@ -5,11 +5,14 @@
 
 bin/
 obj/
+.idea/
+idea/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
 
 # User-specific files
+*.idea/
 *.rsuser
 *.suo
 *.user
