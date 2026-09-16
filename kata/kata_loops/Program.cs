@@ -1,3 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using kata_loops.Library;
 
-Console.WriteLine("Hello, World!");
+namespace kata_loops
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ForLoops.Ex1_1();
+        }
+    }
+}
