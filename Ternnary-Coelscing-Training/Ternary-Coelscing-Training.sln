@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ternnary-Coelscing-Training", "Ternnary-Coelscing-Training\Ternnary-Coelscing-Training.csproj", "{0F8A5490-DDCD-4788-87A6-25B96D6DDE7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ternary-Coelscing-Training", "Ternary-Coelscing-Training\Ternary-Coelscing-Training.csproj", "{0F8A5490-DDCD-4788-87A6-25B96D6DDE7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
