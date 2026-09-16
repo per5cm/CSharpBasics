@@ -1,6 +1,6 @@
 namespace kata_loops.Library;
 
-public class ForeachLoops
+internal class ForeachLoops
 {
     
 }

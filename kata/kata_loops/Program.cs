@@ -6,7 +6,8 @@ namespace kata_loops
     {
         static void Main(string[] args)
         {
-            ForLoops.Ex1_1();
+            // ForLoops.Ex1_1();
+            WhileLoops.Ex1_2();
         }
     }
 }
