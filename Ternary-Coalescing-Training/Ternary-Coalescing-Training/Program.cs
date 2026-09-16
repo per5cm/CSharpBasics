@@ -1,6 +1,4 @@
-﻿using Ternary_Coelscing_Training.Library;
-
-namespace Ternnary_Coelscing_Training
+﻿namespace Ternnary_Coelscing_Training
 {
     internal class Program
     {

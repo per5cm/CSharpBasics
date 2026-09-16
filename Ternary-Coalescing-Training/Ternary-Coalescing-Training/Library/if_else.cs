@@ -10,7 +10,7 @@ internal class if_else
         string resultIf;
         if (n % 2 == 0) resultIf = "even"; else resultIf = "odd";
         
-        // short ternnary form:
+        // short ternary form:
         string resultTernary
     }
 }
