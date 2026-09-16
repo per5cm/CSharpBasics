@@ -1,10 +1,11 @@
-﻿namespace Ternnary_Coelscing_Training
+﻿using Ternary_Coalescing_Training.Library;
+
+namespace Ternary_Coalescing_Training;
+
+internal class Program
 {
-    internal class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        if_else.Ex1_1();
     }
 }
