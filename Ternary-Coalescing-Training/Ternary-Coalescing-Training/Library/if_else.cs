@@ -23,7 +23,10 @@ internal class if_else
 
     internal static void Ex1_3()
     {
-        int count = 3;
+        // int count = 3;
+        
+        Console.Write("Enter number of items: ");
+        var count = Convert.ToInt32(Console.ReadLine());
 
         // var resultTernary = count <= 1 ? "item" : "items";
         
