@@ -15,4 +15,9 @@ internal class if_else
         
         Console.WriteLine($"{resultIf} / {resultTernary}");
     }
+
+    internal static string Ex1_2(int a, int b)
+    {
+        return a < b ? "less than" : "greater than";
+    }
 }
