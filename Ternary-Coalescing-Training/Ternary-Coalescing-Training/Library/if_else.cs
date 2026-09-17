@@ -20,4 +20,13 @@ internal class if_else
     {
         return a < b ? "less than" : "greater than";
     }
+
+    internal static void Ex1_3()
+    {
+        int count = 3;
+
+        // var resultTernary = count <= 1 ? "item" : "items";
+        
+        Console.WriteLine($"You have {count} {(count <= 1 ? "item" : "items")}");
+    }
 }
