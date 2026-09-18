@@ -26,7 +26,11 @@ internal class if_else
         // int count = 3;
         
         Console.Write("Enter number of items: ");
-        var count = Convert.ToInt32(Console.ReadLine());
+        int count;
+        while (!int.TryParse(Console.ReadLine() ?? string.Empty, out count))
+        {
+            Console.WriteLine("Should be a number.");
+        }
 
         // var resultTernary = count <= 1 ? "item" : "items";
         
