@@ -16,9 +16,9 @@ internal class if_else
         Console.WriteLine($"{resultIf} / {resultTernary}");
     }
 
-    internal static string Ex1_2(int a, int b)
+    internal static int Ex1_2(int a, int b)
     {
-        return a < b ? "less than" : "greater than";
+        return a >= b ? a : b;
     }
 
     internal static void Ex1_3()
@@ -34,6 +34,6 @@ internal class if_else
 
         // var resultTernary = count <= 1 ? "item" : "items";
         
-        Console.WriteLine($"You have {count} {(count <= 1 ? "item" : "items")}");
+        Console.WriteLine($"You have {count} {(count == 1 ? "item" : "items")}");
     }
 }
