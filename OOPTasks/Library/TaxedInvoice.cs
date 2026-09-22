@@ -13,4 +13,5 @@ public class TaxedInvoice : Invoice
     {
        return amount * (1 + _taxRate);
     }
+    
 }
