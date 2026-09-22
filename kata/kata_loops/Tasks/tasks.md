@@ -10,6 +10,7 @@ Suggested setup: one `.cs` file per tier, or throw them all into `Program.cs` an
 ## TIER 1 — MINIMAL (mechanics of a single loop)
 
 ### 1.1 — `for` basics
+
 Print numbers 1 through 10, one per line.
 
 ```csharp
@@ -21,9 +22,11 @@ static void Ex1_1()
     }
 }
 ```
+
 Expected: `1 2 3 ... 10` (each on its own line).
 
 ### 1.2 — `while` basics
+
 Same output as 1.1 but with a `while` loop. You manage the counter yourself.
 
 ```csharp
@@ -39,7 +42,9 @@ static void Ex1_2()
 ```
 
 ### 1.3 — `do-while`
-Ask the user for a number. Keep asking until they type a positive number. `do-while` runs the body at least once — that's the point here.
+
+Ask the user for a number. Keep asking until they type a positive number. `do-while` runs the body at least once —
+that's the point here.
 
 ```csharp
 static void Ex1_3()
@@ -57,6 +62,7 @@ static void Ex1_3()
 ```
 
 ### 1.4 — Countdown + accumulation
+
 Print 10 down to 1, then print the **sum** of 1..10 on the last line.
 
 ```csharp
@@ -73,6 +79,7 @@ static void Ex1_4()
 ```
 
 ### 1.5 — `foreach`
+
 Given an array, print each fruit prefixed with its 1-based position (`1. apple`).
 
 ```csharp
@@ -93,6 +100,7 @@ static void Ex1_5()
 ## TIER 2 — MEDIUM (control flow, nesting, chained logic)
 
 ### 2.1 — `break` and `continue`
+
 Loop 1..50. Skip multiples of 3 (`continue`). Stop entirely the first time you pass 40 (`break`). Print the rest.
 
 ```csharp
@@ -108,6 +116,7 @@ static void Ex2_1()
 ```
 
 ### 2.2 — FizzBuzz
+
 1..30. Multiples of 3 → `Fizz`, of 5 → `Buzz`, of both → `FizzBuzz`, otherwise the number.
 
 ```csharp
@@ -121,6 +130,7 @@ static void Ex2_2()
 ```
 
 ### 2.3 — Nested loop: multiplication table
+
 Print a 5×5 multiplication grid. Rows and columns 1..5. Align it however you like (`\t` is fine).
 
 ```csharp
@@ -138,6 +148,7 @@ static void Ex2_3()
 ```
 
 ### 2.4 — Nested loop: triangle
+
 Print a left-aligned triangle of `*` with 6 rows (row 1 has 1 star, row 6 has 6).
 
 ```
@@ -146,6 +157,7 @@ Print a left-aligned triangle of `*` with 6 rows (row 1 has 1 star, row 6 has 6)
 ***
 ...
 ```
+
 ```csharp
 static void Ex2_4()
 {
@@ -158,6 +170,7 @@ static void Ex2_4()
 ```
 
 ### 2.5 — Search with a flag
+
 Given an array, find whether `target` exists. Print its index or "not found". Break as soon as you find it.
 
 ```csharp
@@ -177,6 +190,7 @@ static void Ex2_5()
 ```
 
 ### 2.6 — Loop chain (sequential pipeline)
+
 Three loops in a row, each feeding the next. This is the "loop chain" idea: transform data in stages.
 
 Stage A: fill an `int[10]` with squares (1, 4, 9, ...).
@@ -214,7 +228,9 @@ static void Ex2_6()
 ## TIER 3 — ADVANCED (nested chains, 2D data, algorithmic loops)
 
 ### 3.1 — 2D grid processing
-Given a `int[3,4]` matrix, compute the sum of each row and the grand total. Use nested loops with `GetLength(0)` / `GetLength(1)` — don't hardcode dimensions.
+
+Given a `int[3,4]` matrix, compute the sum of each row and the grand total. Use nested loops with `GetLength(0)` /
+`GetLength(1)` — don't hardcode dimensions.
 
 ```csharp
 static void Ex3_1()
@@ -241,6 +257,7 @@ static void Ex3_1()
 ```
 
 ### 3.2 — Bubble sort (nested loop algorithm)
+
 Sort an array ascending, by hand, no `Array.Sort`. Outer pass loop + inner compare-and-swap loop.
 
 ```csharp
@@ -261,6 +278,7 @@ static void Ex3_2()
 ```
 
 ### 3.3 — Prime sieve (loop + inner divisor test)
+
 Print all primes from 2 to 50. Outer loop over candidates, inner loop tests divisibility. Use a flag or `break` early.
 
 ```csharp
@@ -279,6 +297,7 @@ static void Ex3_3()
 ```
 
 ### 3.4 — Chained transform pipeline (the real "all that jazz")
+
 Four stages, each a loop, output of one is input to the next. Produce a frequency report.
 
 Input: a sentence string.
@@ -323,7 +342,9 @@ static void Ex3_4()
 ```
 
 ### 3.5 — Nested loop with labelled exit
-C# has no `goto`-free multi-level break by default. Search a 2D grid for a target; when found, you must break out of BOTH loops. Solve it once with a `bool found` flag, then (optional) once with `goto`.
+
+C# has no `goto`-free multi-level break by default. Search a 2D grid for a target; when found, you must break out of
+BOTH loops. Solve it once with a `bool found` flag, then (optional) once with `goto`.
 
 ```csharp
 static void Ex3_5()
@@ -349,7 +370,9 @@ static void Ex3_5()
 ```
 
 ### 3.6 — Collatz (unbounded while, real termination logic)
-For a starting `n`, repeatedly: if even → `n/2`, if odd → `3n+1`, until `n == 1`. Count and print the steps. Try it for n = 27 (it's a long one — good stress test).
+
+For a starting `n`, repeatedly: if even → `n/2`, if odd → `3n+1`, until `n == 1`. Count and print the steps. Try it for
+n = 27 (it's a long one — good stress test).
 
 ```csharp
 static void Ex3_6()
@@ -369,10 +392,13 @@ static void Ex3_6()
 
 ## BONUS TIER — `while` / `do-while` deep dive
 
-`while` earns its keep when you **don't know the iteration count up front**. Every exercise here is one where a `for` loop would be the wrong tool. The recurring hazard: you own the termination condition, so you own the infinite loop.
+`while` earns its keep when you **don't know the iteration count up front**. Every exercise here is one where a `for`
+loop would be the wrong tool. The recurring hazard: you own the termination condition, so you own the infinite loop.
 
 ### B.1 — Digit stripping
-Given `int n = 9384`, print each digit **in reverse order** (4, 8, 3, 9) and the digit sum. No strings, no `ToString()` — use `% 10` and `/ 10`.
+
+Given `int n = 9384`, print each digit **in reverse order** (4, 8, 3, 9) and the digit sum. No strings, no
+`ToString()` — use `% 10` and `/ 10`.
 
 ```csharp
 static void ExB_1()
@@ -388,10 +414,13 @@ static void ExB_1()
     // TODO print sum   (expected: 24)
 }
 ```
+
 Trap: if your condition is `n != 0` vs `n > 0`, what happens with a negative input? Try `n = -9384`.
 
 ### B.2 — Input validation loop
-Keep prompting until the user enters a valid integer between 1 and 100. Reject non-numeric input **without crashing** (`int.TryParse`, not `int.Parse`).
+
+Keep prompting until the user enters a valid integer between 1 and 100. Reject non-numeric input **without crashing**
+(`int.TryParse`, not `int.Parse`).
 
 ```csharp
 static void ExB_2()
@@ -414,7 +443,9 @@ static void ExB_2()
 ```
 
 ### B.3 — Sentinel-controlled loop
-Read numbers from the user until they type `-1` (the sentinel). Then print the count, sum, and average of everything entered *before* the sentinel. The sentinel must not be counted.
+
+Read numbers from the user until they type `-1` (the sentinel). Then print the count, sum, and average of everything
+entered *before* the sentinel. The sentinel must not be counted.
 
 ```csharp
 static void ExB_3()
@@ -436,7 +467,9 @@ static void ExB_3()
 ```
 
 ### B.4 — Menu loop (`do-while`)
-Classic console menu. Show options, act on the choice, repeat until they pick Quit. `do-while` because the menu must display at least once.
+
+Classic console menu. Show options, act on the choice, repeat until they pick Quit. `do-while` because the menu must
+display at least once.
 
 ```csharp
 static void ExB_4()
@@ -458,7 +491,10 @@ static void ExB_4()
 ```
 
 ### B.5 — Convergence loop (unknown iteration count)
-Compute the square root of 2 using Newton's method. Start with `guess = 1.0`. Each step: `guess = (guess + 2 / guess) / 2`. Stop when the change between iterations is smaller than `0.0000001`. Print the guess and iteration count each step.
+
+Compute the square root of 2 using Newton's method. Start with `guess = 1.0`. Each step:
+`guess = (guess + 2 / guess) / 2`. Stop when the change between iterations is smaller than `0.0000001`. Print the guess
+and iteration count each step.
 
 ```csharp
 static void ExB_5()
@@ -479,10 +515,14 @@ static void ExB_5()
     // TODO print final result and compare to Math.Sqrt(2)
 }
 ```
-This is the exercise that proves the point: you cannot write this as a `for` loop, because nothing knows in advance how many steps it takes.
+
+This is the exercise that proves the point: you cannot write this as a `for` loop, because nothing knows in advance how
+many steps it takes.
 
 ### B.6 — GCD by subtraction
-Euclid's algorithm, subtraction variant. While `a != b`, subtract the smaller from the larger. When they're equal, that value is the GCD.
+
+Euclid's algorithm, subtraction variant. While `a != b`, subtract the smaller from the larger. When they're equal, that
+value is the GCD.
 
 ```csharp
 static void ExB_6()
@@ -497,10 +537,14 @@ static void ExB_6()
     // TODO print GCD (expected: 6)
 }
 ```
-Then: rewrite it with the modulo variant (`while (b != 0) { temp = b; b = a % b; a = temp; }`) and count iterations for both. Note the difference for inputs like `a = 1000000, b = 3`.
+
+Then: rewrite it with the modulo variant (`while (b != 0) { temp = b; b = a % b; a = temp; }`) and count iterations for
+both. Note the difference for inputs like `a = 1000000, b = 3`.
 
 ### B.7 — Nested `while` with a chain
-Two `while` loops feeding each other. Outer walks a queue of tasks; inner retries a task until it "succeeds". Simulate with a counter.
+
+Two `while` loops feeding each other. Outer walks a queue of tasks; inner retries a task until it "succeeds". Simulate
+with a counter.
 
 ```csharp
 static void ExB_7()
@@ -527,7 +571,9 @@ static void ExB_7()
 ```
 
 ### B.8 — Infinite loop autopsy
-Each of these is broken. **Don't fix them yet** — first write down *why* each never terminates. Then fix each with a one-line change.
+
+Each of these is broken. **Don't fix them yet** — first write down *why* each never terminates. Then fix each with a
+one-line change.
 
 ```csharp
 // A
@@ -559,7 +605,9 @@ while (x > 0)
     x = x * 2;
 }
 ```
-C and D are the interesting ones. C is about floating-point equality. D terminates eventually — but not the way you'd expect. Work out what actually happens.
+
+C and D are the interesting ones. C is about floating-point equality. D terminates eventually — but not the way you'd
+expect. Work out what actually happens.
 
 ---
 
@@ -567,12 +615,14 @@ C and D are the interesting ones. C is about floating-point equality. D terminat
 
 1. Print a **hollow** square of `*` (border only) of size N.
 2. Pascal's triangle, 8 rows, using only loops and a jagged array.
-3. Given two sorted arrays, merge them into one sorted array using a single `while` loop with two index pointers (the merge step of merge sort).
+3. Given two sorted arrays, merge them into one sorted array using a single `while` loop with two index pointers (the
+   merge step of merge sort).
 4. Rewrite Ex3_4's whole pipeline using LINQ — then decide for yourself whether the explicit loops were clearer.
 
 ---
 
 ### How to self-check
+
 - Does it compile with zero warnings?
 - Does the output match the "Expected" notes where given?
 - For the pipelines: can you explain out loud what each stage's loop hands to the next?

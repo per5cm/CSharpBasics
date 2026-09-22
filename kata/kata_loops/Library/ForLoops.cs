@@ -4,9 +4,6 @@ internal class ForLoops
 {
     internal static void Ex1_1()
     {
-        for (int i = 0; i <= 10; i++)
-        {
-            Console.WriteLine($"Step: {i}");
-        }
+        for (var i = 0; i <= 10; i++) Console.WriteLine($"Step: {i}");
     }
 }
