@@ -21,11 +21,15 @@ internal static class ForLoops
 
     internal static void Ex2_1()
     {
+        var sum = 0;
         for (int i = 1; i <= 50; i++)
         {
             if (i > 40) break;
             if (i % 3 == 0) continue;
-            Console.Write($" {i}");
+            Console.Write($"{i}, ");
+            sum++;
         }
+        
+        Console.WriteLine($"Total number count: {sum}");
     }
 }
