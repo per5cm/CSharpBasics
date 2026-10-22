@@ -18,4 +18,14 @@ internal static class ForLoops
         
         Console.WriteLine($"Current total Sum: {sum}");
     }
+
+    internal static void Ex2_1()
+    {
+        for (int i = 1; i <= 50; i++)
+        {
+            if (i > 40) break;
+            if (i % 3 == 0) continue;
+            Console.Write($" {i}");
+        }
+    }
 }
