@@ -42,4 +42,17 @@ internal static class ForLoops
             if (i % 3 == 0) Console.WriteLine("Fizz");
         }
     }
+
+    internal static void Ex2_3()
+    {
+        for (int row = 1; row <= 5; row++)
+        {
+            for (int col = 1; col <= 5; col++)
+            {
+                Console.Write($"{row * col}, ");
+            }
+            
+            Console.WriteLine();
+        }
+    }
 }
