@@ -9,7 +9,7 @@ internal static class ForLoops
 
     internal static void Ex1_4()
     {
-        int sum = 0;
+        var sum = 0;
         for (int i = 10; i >= 1; i--)
         {
             Console.WriteLine($"Current Number: {i}");
