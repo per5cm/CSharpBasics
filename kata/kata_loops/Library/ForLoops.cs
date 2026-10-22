@@ -55,4 +55,17 @@ internal static class ForLoops
             Console.WriteLine();
         }
     }
+
+    internal static void Ex2_4()
+    {
+        for (int row = 1; row <= 6; row++)
+        {
+            for (int col = 1; col <= 6; col++)
+            {
+                Console.Write($"{row}");
+            }
+            
+            Console.WriteLine(); 
+        }
+    }
 }
