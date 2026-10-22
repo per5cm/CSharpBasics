@@ -8,6 +8,7 @@ internal class Program
     {
         // ForLoops.Ex1_1();
         // WhileLoops.Ex1_2();
-        WhileLoops.Ex1_3();
+        // WhileLoops.Ex1_3();
+        ForLoops.Ex1_4();
     }
 }
