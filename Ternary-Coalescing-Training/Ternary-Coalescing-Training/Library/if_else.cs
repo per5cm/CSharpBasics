@@ -1,6 +1,6 @@
 namespace Ternary_Coalescing_Training.Library;
 
-internal class if_else
+internal class ifElse
 {
     internal static void Ex1_1()
     {
