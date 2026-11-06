@@ -36,4 +36,16 @@ internal class ifElse
         
         Console.WriteLine($"You have {count} {(count == 1 ? "item" : "items")}");
     }
+
+    internal static void Ex1_4()
+    {
+        string name = null;
+
+        // Long form:
+        string safeIf = (name != null) ? name: "(unknown)";
+
+        // string safeCoalesce = 
+
+        Console.WriteLine(safeIf);
+    }
 }
