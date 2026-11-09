@@ -1,6 +1,6 @@
 namespace Ternary_Coalescing_Training.Library;
 
-internal class IfElse
+internal class ifElse
 {
     internal static void Ex1_1()
     {
@@ -35,17 +35,5 @@ internal class IfElse
         // var resultTernary = count <= 1 ? "item" : "items";
         
         Console.WriteLine($"You have {count} {(count == 1 ? "item" : "items")}");
-    }
-
-    internal static void Ex1_4()
-    {
-        string name = null;
-        
-        // Long form:
-        string safeIf = (name != null) ? name : "(unknown)";
-        
-        //
-        
-        Console.WriteLine(safeIf);
     }
 }
