@@ -39,10 +39,10 @@ internal class ifElse
 
     internal static void Ex1_4()
     {
-        // string name = null;
+        string name = null; // "Alchemist"
         
-        Console.WriteLine("Enter the name: ");
-        string? name = Console.ReadLine();
+        // Console.WriteLine("Enter the name: ");
+        // string? name = Console.ReadLine();
         
         // Long form
         // string safeIf = (name != null) ? name : "(unknown)";
@@ -52,5 +52,19 @@ internal class ifElse
         string shortCoalesce = name ?? "(Unknown)";
         
         Console.WriteLine(shortCoalesce);
+    }
+
+    internal static void Ex1_5()
+    {
+        int? maybe = null;
+        
+        Console.WriteLine(maybe.HasValue);
+
+        int? coalesce = maybe ?? 0;
+
+        int? coalesce2 = maybe.GetValueOrDefault();
+        
+        Console.WriteLine(coalesce);
+        Console.WriteLine(coalesce2);
     }
 }
