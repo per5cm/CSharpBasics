@@ -62,9 +62,20 @@ internal class ifElse
 
         int? coalesce = maybe ?? 0;
 
-        int? coalesce2 = maybe.GetValueOrDefault();
+        int? getValue = maybe.GetValueOrDefault();
         
         Console.WriteLine(coalesce);
+        Console.WriteLine(getValue);
+
+        int? other = 42;
+        
+        Console.WriteLine(other.HasValue);
+
+        int? coalesce2 = other ?? 0;
+
+        int? getValue2 = other.GetValueOrDefault();
+        
         Console.WriteLine(coalesce2);
+        Console.WriteLine(getValue2);
     }
 }

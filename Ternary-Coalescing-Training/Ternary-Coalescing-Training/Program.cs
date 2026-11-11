@@ -9,6 +9,7 @@ internal class Program
         // IfElse.Ex1_1();
         // Console.WriteLine(ifElse.Ex1_2(9, 3));
         // IfElse.Ex1_3();
-        ifElse.Ex1_4();
+        // ifElse.Ex1_4();
+        ifElse.Ex1_5();
     }
 }
