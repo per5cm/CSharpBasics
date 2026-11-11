@@ -39,13 +39,18 @@ internal class ifElse
 
     internal static void Ex1_4()
     {
-        string name = null;
+        // string name = null;
+        
+        Console.WriteLine("Enter the name: ");
+        string? name = Console.ReadLine();
         
         // Long form
-        string safeIf = (name != null) ? name : "(unknown)";
+        // string safeIf = (name != null) ? name : "(unknown)";
         
         // Short form
+
+        string shortCoalesce = name ?? "(Unknown)";
         
-        Console.WriteLine(safeIf);
+        Console.WriteLine(shortCoalesce);
     }
 }
