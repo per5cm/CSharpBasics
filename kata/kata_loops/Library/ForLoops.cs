@@ -60,12 +60,11 @@ internal static class ForLoops
     {
         for (int row = 1; row <= 6; row++)
         {
-            for (int col = 1; col <= 6; col++)
+            for (int col = 1; col <= row; col++)
             {
-                Console.Write($"{row}");
+                Console.Write("*");
             }
-            
-            Console.WriteLine(); 
+            Console.WriteLine();
         }
     }
 }
