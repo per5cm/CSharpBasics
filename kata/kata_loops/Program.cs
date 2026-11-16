@@ -15,6 +15,7 @@ internal class Program
         // ForLoops.Ex2_2();
         // ForLoops.Ex2_3();
         // ForLoops.Ex2_4();
-        ForLoops.Ex2_5();
+        // ForLoops.Ex2_5();
+        ForLoops.Ex2_6();
     }
 }

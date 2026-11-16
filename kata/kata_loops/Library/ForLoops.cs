@@ -81,4 +81,32 @@ internal static class ForLoops
         
         Console.WriteLine($"Found at position: {foundAt}.");
     }
+
+    internal static void Ex2_6()
+    {
+        int[] squares = new int[10];
+        // Stage A 
+        for (int i = 0; i < squares.Length; i++)
+        {
+            squares[i] = i * i;
+        }
+
+        var evens = new List<int>();
+        // Stage B
+        foreach (var s in squares)
+        {
+            if (evens.Contains(s))
+            {
+                evens.Add(s);
+            }
+        }
+        
+        // Stage c
+        int running = 0;
+        foreach (var e in evens)
+        {
+            running += e;
+            Console.WriteLine($"{e} -> {running}");
+        }
+    }
 }
