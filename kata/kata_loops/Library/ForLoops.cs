@@ -31,4 +31,14 @@ internal static class ForLoops
             Console.WriteLine(i);
         }
     }
+
+    internal static void Ex2_2()
+    {
+        for (int i = 1; i <= 50; i++)
+        {
+            if (i % 15 == 0) Console.WriteLine($"FizzBuzz");
+            if (i % 5 == 0) Console.WriteLine($"Buzz");
+            if (i % 3 == 0) Console.WriteLine($"Fizz");
+        }
+    }
 }

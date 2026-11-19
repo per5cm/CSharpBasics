@@ -11,6 +11,7 @@ internal class Program
         // DoWhile.Ex1_3();
         // ForLoops.Ex1_5();
         // ForeachLoops.Ex1_5();
-        ForLoops.Ex2_1();
+        // ForLoops.Ex2_1();
+        ForLoops.Ex2_2();
     }
 }
