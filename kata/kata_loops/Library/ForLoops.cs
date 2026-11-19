@@ -10,7 +10,7 @@ internal static class ForLoops
         }
     }
 
-    internal static void Ex1_5()
+    internal static void Ex1_4()
     {
         int summe = 0;
         for (int i = 10; i >= 1; i--)
