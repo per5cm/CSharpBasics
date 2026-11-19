@@ -10,6 +10,7 @@ internal class Program
         // WhileLoops.Ex1_2();
         // DoWhile.Ex1_3();
         // ForLoops.Ex1_5();
-        ForeachLoops.Ex1_5();
+        // ForeachLoops.Ex1_5();
+        ForLoops.Ex2_1();
     }
 }
