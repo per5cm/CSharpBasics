@@ -12,6 +12,9 @@ internal class Program
         // ForLoops.Ex1_5();
         // ForeachLoops.Ex1_5();
         // ForLoops.Ex2_1();
-        ForLoops.Ex2_2();
+        // ForLoops.Ex2_2();
+
+        string hello = "Hello World";
+        Console.WriteLine($"{hello}");
     }
 }
