@@ -59,10 +59,13 @@ internal static class ForLoops
     {
         for (int row = 1; row <= 6; row++)
         {
-            for (int col = 1; col <= 6; col++)
+            // for (int col = 1; col <= row; col++) <= for straight pyramid.
+            for (int col = 6; col >= row; col--)  
             {
-                Console.WriteLine();
+                Console.Write("*");
             }
+            
+            Console.WriteLine();
         }
     }
 }
