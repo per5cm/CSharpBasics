@@ -77,8 +77,7 @@ internal static class ForLoops
 
         for (int i = 0; i < data.Length; i++)
         {
-            foundAt += 1;
-            if (data[i] == target) break;
+            if (data[i] == target) foundAt = i;
         }
         Console.WriteLine($"Found at index: {foundAt}");
     }
