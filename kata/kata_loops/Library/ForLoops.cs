@@ -72,13 +72,13 @@ internal static class ForLoops
     internal static void Ex2_5()
     {
         int[] data = { 4, 8, 15, 16, 23, 42 };
-        int target = 16;
+        int target = 99;
         int foundAt = -1;
 
         for (int i = 0; i < data.Length; i++)
         {
-            if (i == target) break;
-            
+            foundAt += 1;
+            if (data[i] == target) break;
         }
         Console.WriteLine($"Found at index: {foundAt}");
     }
